@@ -40,8 +40,8 @@ export default function Input({
                         {masked ? (
                             <TextInputMask
                                 options={{
-                                    mask: masked === 'phone' ? '(99) 999-9999'
-                                        : masked === 'to' ? 'AAA 9999999' : '99 | A 999 AA',
+                                    mask: masked === 'phone' ? '(99) 999-99-99'
+                                        : masked === 'phoneSecond' ? '(99) 999 99 99' : '99 | A 999 AA',
                                 }}
                                 type={masked === 'phone' ? 'cel-phone' : 'custom'}
                                 style={{ ...styles.inputStyle, ...text }}
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     label: {
         fontSize: 20,
         fontWeight: '600',
-        marginBottom: 10,
+        marginBottom: 6,
         letterSpacing: 0.5,
         color: colors.dark_swampy,
     },

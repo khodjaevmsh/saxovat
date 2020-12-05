@@ -25,16 +25,16 @@ const styles = StyleSheet.create({
     wrapper: {
         backgroundColor: 'white',
         paddingHorizontal: 28,
-        paddingTop: 12,
+        paddingTop: 24,
     },
     mainTitle: {
         color: colors.swampy,
-        fontSize: 42,
+        fontSize: 38,
         fontWeight: '700',
     },
     mainSubtitle: {
         color: colors.gray,
-        fontSize: 24,
+        fontSize: 22,
         fontWeight: '400',
     },
 })
