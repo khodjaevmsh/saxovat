@@ -18,9 +18,9 @@ export function RedCard({ width }) {
     )
 }
 
-export function YellowCard() {
+export function YellowCard({ width }) {
     return (
-        <Svg width="168" height="210" viewBox="0 0 168 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <Svg width={width} height="210" viewBox="0 0 168 210" fill="none" xmlns="http://www.w3.org/2000/svg">
             <Rect width="168" height="209.79" rx="25" fill="#FFC542" />
             <Mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="168" height="210">
                 <Rect width="168" height="209.79" rx="25" fill="white" />
@@ -33,9 +33,9 @@ export function YellowCard() {
     )
 }
 
-export function GreenCard() {
+export function GreenCard({ width }) {
     return (
-        <Svg width="168" height="210" viewBox="0 0 168 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <Svg width={width} height="210" viewBox="0 0 168 210" fill="none" xmlns="http://www.w3.org/2000/svg">
             <G clipPath="url(#clip0)">
                 <Rect width="168" height="209.79" rx="25" fill="#3ED598" />
                 <Mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="168" height="210">
@@ -45,7 +45,8 @@ export function GreenCard() {
                     <Rect x="-51" y="147" width="125.3" height="108.778"
                         rx="27.9688" fill="#41AD81" fillOpacity="0.8" />
                 </G>
-                <Rect x="132" y="50" width="76.075" height="65.2667" rx="32.6333" fill="#41AD81" fillOpacity="0.8" />
+                <Rect x="132" y="50" width="76.075" height="65.2667" rx="32.6333"
+                    fill="#41AD81" fillOpacity="0.8" />
             </G>
             <Defs>
                 <ClipPath id="clip0">
@@ -53,6 +54,23 @@ export function GreenCard() {
                 </ClipPath>
             </Defs>
         </Svg>
+    )
+}
 
+export function LineDot({ style }) {
+    return (
+        <Svg style={style} width="24" height="4" viewBox="0 0 24 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <Line x1="2" y1="2" x2="22" y2="2" stroke="#515DC3"
+                strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+        </Svg>
+    )
+}
+
+export function Dot({ style }) {
+    return (
+        <Svg style={style} width="5" height="4" viewBox="0 0 5 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <Line x1="2" y1="2" x2="3" y2="2" stroke="#515DC3"
+                strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+        </Svg>
     )
 }
