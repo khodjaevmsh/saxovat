@@ -13,13 +13,13 @@ export default function DeliveryScreen() {
             <ScrollView showsVerticalScrollIndicator={false}>
                 <StatusBar backgroundColor="white" barStyle="dark-content" />
 
-                <View style={styles.services}>
-                    <Text style={styles.title}>Yetqazib berish</Text>
-                    <Text style={styles.subTitle}>kerak bo’lgan xayriya mahsulotlari</Text>
+            <View style={styles.services}>
+                <Text style={styles.title}>Yetqazib berish</Text>
+                <Text style={styles.subTitle}>kerak bo’lgan xayriya mahsulotlari</Text>
 
                     <View style={{ display: 'flex' }}>
-                        {cards.map((item) => (
-                            <View style={{ ...styles.box, backgroundColor: '#F0F0F0' }}>
+                        {cards.map((item, index) => (
+                            <View key={index} style={{ ...styles.box, backgroundColor: '#F0F0F0' }}>
                                 <View>
                                     <Text style={{
                                         fontSize: n(18),

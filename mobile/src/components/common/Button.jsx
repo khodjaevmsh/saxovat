@@ -43,7 +43,6 @@ const styles = StyleSheet.create({
         fontSize: n(20),
         fontWeight: '600',
         marginBottom: n(10),
-        letterSpacing: n(0.5),
         color: colors.dark_swampy,
     },
     icon: {

@@ -13,6 +13,10 @@ import RecipientTab from './screens/RecipientTab'
 import Recipient from './screens/Recipient'
 import DeliveryTab from './screens/DeliveryTab'
 import ToWhomDetail from './screens/ToWhomDetail'
+import Food from './screens/Food'
+import Auth from './screens/Auth'
+import Confirm from './screens/Confirm'
+import Register from './screens/Register'
 import PaymentType from './screens/PaymentType'
 import { n } from './utils/normalize'
 
@@ -21,12 +25,15 @@ const Tab = createBottomTabNavigator()
 
 export default function Navigation() {
     const { token, headerOptions } = useContext(GlobalContext)
-    const initial = 'TabScreen'
+    const initial = token ? 'TabScreen' : 'Auth'
 
     return (
         <NavigationContainer theme={{ colors: { background: 'white' } }}>
             <Stack.Navigator initialRouteName={initial} screenOptions={{ headerStyle: styles.stackHeader }}>
+                <Stack.Screen name="Auth" component={Auth} options={{ headerShown: false }} />
                 <Stack.Screen name="TabScreen" component={TabScreen} options={{ headerShown: false }} />
+                <Stack.Screen name="Confirm" component={Confirm} options={{ headerShown: false }} />
+                <Stack.Screen name="Register" component={Register} options={{ headerShown: false }} />
                 <Stack.Screen name="ToWhomDetail" component={ToWhomDetail} options={{
                     headerShown: true,
                     title: null,

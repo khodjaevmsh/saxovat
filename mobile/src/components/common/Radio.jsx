@@ -2,6 +2,7 @@ import React from 'react'
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import { Field } from 'formik'
 import { n } from '../../utils/normalize'
+import { colors } from '../../utils/colors'
 
 export default function Radio({ name, items }) {
     return (
@@ -41,21 +42,22 @@ const styles = StyleSheet.create({
     button: {
         justifyContent: 'center',
         alignItems: 'center',
-        width: n(26),
-        height: n(26),
+        width: n(30),
+        height: n(30),
         backgroundColor: '#F0F0F0',
         borderRadius: n(50),
     },
     buttonActive: {
-        width: n(26),
-        height: n(26),
+        width: n(30),
+        height: n(30),
         borderStyle: 'solid',
-        borderWidth: n(9),
-        borderColor: '#223263',
+        borderWidth: n(11),
+        borderColor: colors.swampy,
         borderRadius: n(50),
     },
     buttonText: {
-        fontSize: n(16),
-        marginLeft: n(9),
+        fontSize: n(20),
+        marginLeft: n(10),
+        color: colors.dark_swampy,
     },
 })

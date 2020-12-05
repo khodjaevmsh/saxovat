@@ -5,14 +5,20 @@ import Input from './common/Input'
 import Button from './common/Button'
 import TextArea from './common/TextArea'
 import { n } from '../utils/normalize'
+import Radio from './common/Radio'
 
 export default function RecipientForm() {
+    const categories = [
+        { value: true, name: 'Shaxs' },
+        { value: false, name: 'Tashkilot' },
+    ]
+
     function onSubmit() {
         console.log('success submit')
     }
 
     return (
-        <Formik onSubmit={onSubmit} initialValues={{ name: '', phone: '', comment: '' }}>
+        <Formik onSubmit={onSubmit} initialValues={{ name: '', phone: '', comment: '', category: '' }}>
             {({ handleSubmit }) => (
                 <View>
                     <View style={styles.input}>
@@ -24,6 +30,10 @@ export default function RecipientForm() {
                             placeholder="Familiya, Ism"
                             placeholderTextColor="#C4C4C4"
                             maxLength={45} />
+                    </View>
+
+                    <View style={styles.radio}>
+                        <Radio name="category" items={categories} />
                     </View>
 
                     <View style={styles.input}>
@@ -52,7 +62,7 @@ export default function RecipientForm() {
                             label="Qo’shimcha ma’lumot"
                             name="comment"
                             keyboard="default"
-                            placeholder="Qo’shimcha ma’lumotlar uchun"
+                            placeholder="Manzil va qo’shimcha ma’lumotlar uchun"
                             placeholderTextColor="#C4C4C4"
                             maxLength={255} />
                     </View>
@@ -72,5 +82,12 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 17,
         color: '#686866',
+    },
+    radio: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginVertical: n(10),
     },
 })

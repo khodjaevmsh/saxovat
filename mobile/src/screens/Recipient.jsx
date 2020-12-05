@@ -2,6 +2,7 @@ import React from 'react'
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import * as Icon from 'react-native-feather'
 import { useNavigation } from '@react-navigation/native'
+import { colors } from '../utils/colors'
 import { n } from '../utils/normalize'
 
 export default function Recipient() {
@@ -33,7 +34,7 @@ export default function Recipient() {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Kimga</Text>
-            <Text style={{ color: '#96A7AF', marginBottom: n(20) }}>qabul qiluvchini tanlang</Text>
+            <Text style={styles.subTitle}>qabul qiluvchini tanlang</Text>
 
             <View style={{ display: 'flex' }}>
                 {cards.map((item) => (
@@ -62,6 +63,17 @@ export default function Recipient() {
 }
 
 const styles = StyleSheet.create({
+    title: {
+        fontSize: n(42),
+        fontWeight: 'bold',
+        color: colors.dark_swampy,
+    },
+    subTitle: {
+        fontSize: n(24),
+        fontWeight: '400',
+        marginBottom: n(20),
+        color: colors.light_gray,
+    },
     container: {
         marginHorizontal: n(20),
     },
@@ -69,10 +81,6 @@ const styles = StyleSheet.create({
         paddingHorizontal: n(20),
         display: 'flex',
         justifyContent: 'center',
-    },
-    title: {
-        fontSize: n(32),
-        color: '#1A3B34',
     },
     iconHome: {
         color: 'white',
