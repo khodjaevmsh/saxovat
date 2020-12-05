@@ -25,7 +25,11 @@ export default function Navigation() {
         <NavigationContainer>
             <Stack.Navigator initialRouteName={initial} screenOptions={{ headerStyle: styles.stackHeader }}>
                 <Stack.Screen name="TabScreen" component={TabScreen} options={{ headerShown: false }} />
-                <Stack.Screen name="Recipient" component={Recipient} options={{ headerShown: false }} />
+                <Stack.Screen name="Recipient" component={Recipient} options={{
+                    title: '',
+                    headerBackImage: () => (<Icon.ChevronLeft color={colors.gray} />),
+                    headerBackTitle: 'Orqaga',
+                }} />
             </Stack.Navigator>
         </NavigationContainer>
     )
