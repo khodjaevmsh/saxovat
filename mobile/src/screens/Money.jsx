@@ -23,7 +23,7 @@ export default function Money() {
 
             <Formik onSubmit={onSubmit} initialValues={{ address: '', amount: '' }}>
                 {({ handleSubmit }) => (
-                    <View>
+                    <View style={{ flex: 1 }}>
                         <ButtonLikeInput
                             label="Kimga"
                             title="Mehribonlik uyi №15"
@@ -61,7 +61,10 @@ const styles = StyleSheet.create({
         color: colors.light_gray,
     },
     button: {
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        right: 0,
         justifyContent: 'flex-end',
-        marginTop: n(40),
     },
 })
