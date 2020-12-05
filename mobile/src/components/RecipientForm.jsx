@@ -6,15 +6,19 @@ import Button from './common/Button'
 import TextArea from './common/TextArea'
 import { n } from '../utils/normalize'
 import Radio from './common/Radio'
+import { recipientCategory } from '../utils/recipientCategory'
+import { usePostRequest } from '../hooks/request'
+import { RECIPIENT } from '../urls'
 
 export default function RecipientForm() {
-    const categories = [
-        { value: true, name: 'Shaxs' },
-        { value: false, name: 'Tashkilot' },
-    ]
+    // const recipientCreate = usePostRequest({ url: RECIPIENT })
 
-    function onSubmit() {
-        console.log('success submit')
+    async function onSubmit(data) {
+        // const { error } = await recipientCreate.request({ data })
+        // if (error) {
+        //     return
+        // }
+        console.log(data)
     }
 
     return (
@@ -33,7 +37,7 @@ export default function RecipientForm() {
                     </View>
 
                     <View style={styles.radio}>
-                        <Radio name="category" items={categories} />
+                        <Radio name="category" items={recipientCategory} />
                     </View>
 
                     <View style={styles.input}>
