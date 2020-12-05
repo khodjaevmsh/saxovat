@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View, ScrollView, StatusBar } from 'react-native'
 import MainCards from '../components/MainCards'
-import Foundations from '../components/FondCard'
+import Foundations from '../components/Foundations'
 import { colors } from '../utils/colors'
 
 export default function MainScreen() {
@@ -14,9 +14,9 @@ export default function MainScreen() {
                 <Text style={styles.mainSubtitle}>xayriya turini belgilang</Text>
 
                 <MainCards />
-
-                <Foundations />
             </View>
+
+            <Foundations />
         </ScrollView>
     )
 }
