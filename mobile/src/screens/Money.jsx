@@ -6,6 +6,8 @@ import Container from '../components/common/Container'
 import ButtonLikeInput from '../components/common/ButtonLikeInput'
 import Input from '../components/common/Input'
 import Button from '../components/common/Button'
+import { colors } from '../utils/colors'
+import { n } from '../utils/normalize'
 
 export default function Money() {
     const navigation = useNavigation()
@@ -46,15 +48,17 @@ export default function Money() {
 
 const styles = StyleSheet.create({
     title: {
-        fontSize: 42,
+        fontSize: n(42),
         fontWeight: 'bold',
+        color: colors.dark_swampy,
     },
     subTitle: {
-        fontSize: 24,
+        fontSize: n(24),
         fontWeight: '400',
-        marginBottom: 20,
+        marginBottom: n(20),
+        color: colors.light_gray,
     },
     button: {
-        marginTop: 40,
+        marginTop: n(40),
     },
 })

@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
         fontWeight: '600',
         marginBottom: 10,
         letterSpacing: 0.5,
+        color: colors.dark_swampy,
     },
     icon: {
         flexDirection: 'row',
