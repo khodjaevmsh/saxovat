@@ -36,9 +36,14 @@ class Donation(BaseModel):
 
 
 class Recipient(BaseModel):
-    category = models.ForeignKey('main.Category', models.CASCADE)
+    CATEGORY = (
+        ('shaxs', 'Shaxs'),
+        ('tashkilot', 'Tashkilot'),
+    )
+    name = models.CharField(max_length=255)
     phone = models.CharField(max_length=255)
-    address = models.CharField(max_length=255)
+    comment = models.TextField(max_length=255)
+    category = models.CharField(max_length=255, choices=CATEGORY, verbose_name="Category")
     objects = RecipientQuerySet.as_manager()
 
     class Meta:
