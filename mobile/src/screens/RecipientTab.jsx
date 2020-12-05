@@ -2,6 +2,7 @@ import React from 'react'
 import { ScrollView, StatusBar, StyleSheet, View, Text } from 'react-native'
 import RecipientForm from '../components/RecipientForm'
 import { colors } from '../utils/colors'
+import { n } from '../utils/normalize'
 
 export default function RecipientScreen() {
     return (
@@ -19,6 +20,11 @@ export default function RecipientScreen() {
 }
 
 const styles = StyleSheet.create({
+    services: {
+        backgroundColor: '#fff',
+        borderTopLeftRadius: n(30),
+        borderTopRightRadius: n(30),
+    },
     wrapper: {
         backgroundColor: 'white',
         paddingHorizontal: 28,

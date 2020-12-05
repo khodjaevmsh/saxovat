@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, TouchableOpacity, Text, StyleSheet, ActivityIndicator } from 'react-native'
 import { colors } from '../../utils/colors'
+import { n } from '../../utils/normalize'
 
 export default function Button({
     onPress,
@@ -36,13 +37,13 @@ export default function Button({
 
 const styles = StyleSheet.create({
     container: {
-        marginVertical: 20,
+        marginVertical: n(20),
     },
     label: {
-        fontSize: 20,
+        fontSize: n(20),
         fontWeight: '600',
-        marginBottom: 10,
-        letterSpacing: 0.5,
+        marginBottom: n(10),
+        letterSpacing: n(0.5),
         color: colors.dark_swampy,
     },
     icon: {
@@ -51,15 +52,15 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
     },
     button: {
-        height: 66,
+        height: n(66),
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: 20,
+        borderRadius: n(20),
     },
     text: {
-        color: 'white',
-        fontSize: 18,
+        color: '#fff',
+        fontSize: n(18),
         fontWeight: 'bold',
     },
     iconRight: {

@@ -85,8 +85,8 @@ const styles = StyleSheet.create({
     },
     services: {
         backgroundColor: '#fff',
-        borderTopLeftRadius: 30,
-        borderTopRightRadius: 30,
+        borderTopLeftRadius: n(30),
+        borderTopRightRadius: n(30),
     },
     box: {
         flexDirection: 'row',

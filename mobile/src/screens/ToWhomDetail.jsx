@@ -2,6 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View, ScrollView, StatusBar, TouchableOpacity } from 'react-native'
 import * as Icon from 'react-native-feather'
 import { colors } from '../utils/colors'
+import { n } from '../utils/normalize'
 
 export default function ToWhomDetail() {
     const shelterHouses = [
@@ -22,7 +23,7 @@ export default function ToWhomDetail() {
                     <TouchableOpacity opacity={0.7}>
                         <View style={styles.card}>
                             <Text style={styles.cardTitle}>{house.name}</Text>
-                            <Icon.ChevronRight color="black" width={60} height={30} />
+                            <Icon.ChevronRight color="black" width={n(60)} height={n(30)} />
                         </View>
                     </TouchableOpacity>
                 ))}
@@ -36,37 +37,37 @@ const styles = StyleSheet.create({
     wrapper: {
         flexDirection: 'column',
         backgroundColor: 'white',
-        paddingHorizontal: 28,
-        paddingTop: 12,
+        paddingHorizontal: n(28),
+        paddingTop: n(12),
     },
     mainTitle: {
-        fontSize: 38,
+        fontSize: n(38),
         fontWeight: '700',
         color: colors.swampy,
     },
     cardTitle: {
-        fontSize: 15,
-        paddingHorizontal: 25,
+        fontSize: n(15),
+        paddingHorizontal: n(25),
     },
     cardSubTitle: {
-        fontSize: 15,
-        paddingHorizontal: 25,
+        fontSize: n(15),
+        paddingHorizontal: n(25),
     },
     mainSubtitle: {
-        fontSize: 24,
+        fontSize: n(24),
         fontWeight: '400',
         color: colors.gray,
-        marginBottom: 30,
+        marginBottom: n(30),
     },
     card: {
         width: '100%',
-        height: 70,
+        height: n(70),
         backgroundColor: colors.grey,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
         alignSelf: 'center',
-        borderRadius: 15,
-        marginBottom: 15,
+        borderRadius: n(15),
+        marginBottom: n(15),
     },
 })

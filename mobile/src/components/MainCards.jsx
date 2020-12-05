@@ -3,6 +3,7 @@ import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
 import * as Icon from 'react-native-feather'
 import { useNavigation } from '@react-navigation/native'
 import { RedCard, YellowCard, GreenCard } from './Svgs'
+import { n } from '../utils/normalize'
 
 export default function MainCards() {
     const navigation = useNavigation()
@@ -18,7 +19,7 @@ export default function MainCards() {
                 <RedCard width="100%" />
 
                 <View style={styles.icon}>
-                    <Icon.CreditCard width={100} height={80} color="white" />
+                    <Icon.CreditCard width={n(100)} height={n(80)} color="white" />
                 </View>
             </TouchableOpacity>
 
@@ -32,7 +33,7 @@ export default function MainCards() {
                     <YellowCard width="100%" />
 
                     <View style={styles.iconSecond}>
-                        <Icon.Box color="white" width={72} height={72} />
+                        <Icon.Box color="white" width={n(72)} height={n(72)} />
                     </View>
                 </TouchableOpacity>
 
@@ -45,7 +46,7 @@ export default function MainCards() {
                     <GreenCard width="100%" />
 
                     <View style={styles.iconSecond}>
-                        <Icon.Gift color="white" width={72} height={72} />
+                        <Icon.Gift color="white" width={n(72)} height={n(72)} />
                     </View>
                 </TouchableOpacity>
             </View>
@@ -65,7 +66,7 @@ const styles = StyleSheet.create({
     blockText: {
         color: 'white',
         zIndex: 2,
-        fontSize: 23,
+        fontSize: n(23),
         fontWeight: '600',
     },
     icon: {
@@ -79,7 +80,7 @@ const styles = StyleSheet.create({
         left: '40%',
     },
     flex: {
-        marginTop: -25,
+        marginTop: n(-25),
         width: '100%',
         flexDirection: 'row',
     },

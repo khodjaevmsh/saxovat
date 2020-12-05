@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, Image, StyleSheet } from 'react-native'
+import { n } from '../utils/normalize'
 
 export default function FundCard({ fund }) {
     return (
@@ -12,14 +13,14 @@ export default function FundCard({ fund }) {
 const styles = StyleSheet.create({
     block: {
         backgroundColor: 'white',
-        width: 100,
-        height: 100,
-        borderRadius: 16,
-        marginRight: 16,
+        width: n(100),
+        height: n(100),
+        borderRadius: n(16),
+        marginRight: n(16),
     },
     image: {
-        width: 70,
-        height: 70,
-        margin: 15,
+        width: n(70),
+        height: n(70),
+        margin: n(15),
     },
 })

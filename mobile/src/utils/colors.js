@@ -1,5 +1,8 @@
 export const colors = {
     blue: '#006D77',
+    light_blue: '#53B7D1',
+    till: '#33CCCC',
+    orange: '#FF8A34',
     yellow: '#FFC542',
     grey: '#F2F2F2',
     swampy: '#036068',

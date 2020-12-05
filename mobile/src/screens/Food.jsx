@@ -7,6 +7,7 @@ import ButtonLikeInput from '../components/common/ButtonLikeInput'
 import Button from '../components/common/Button'
 import Radio from '../components/common/Radio'
 import TextArea from '../components/common/TextArea'
+import { n } from '../utils/normalize'
 
 export default function Food() {
     const navigation = useNavigation()
@@ -36,10 +37,10 @@ export default function Food() {
                                 onPress={() => navigation.navigate('Recipient')} />
 
                             <Text style={{
-                                fontSize: 20,
+                                fontSize: n(20),
                                 fontWeight: '600',
-                                marginBottom: 10,
-                                letterSpacing: 0.5,
+                                marginBottom: n(10),
+                                letterSpacing: n(0.5),
                             }}>
                                 Kim yetqazib beradi?
                             </Text>
@@ -67,7 +68,7 @@ export default function Food() {
 
 const styles = StyleSheet.create({
     title: {
-        fontSize: 42,
+        fontSize: n(42),
         fontWeight: 'bold',
     },
     radio: {
@@ -75,11 +76,11 @@ const styles = StyleSheet.create({
         flexWrap: 'wrap',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginBottom: 10,
+        marginBottom: n(10),
     },
     subTitle: {
-        fontSize: 24,
+        fontSize: n(24),
         fontWeight: '400',
-        marginBottom: 20,
+        marginBottom: n(20),
     },
 })

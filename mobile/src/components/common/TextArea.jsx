@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, StyleSheet, TextInput, Text } from 'react-native'
 import { Field } from 'formik'
+import { n } from '../../utils/normalize'
 import { colors } from '../../utils/colors'
 
 export default function TextArea({
@@ -42,28 +43,28 @@ export default function TextArea({
 
 const styles = StyleSheet.create({
     label: {
-        fontSize: 20,
+        fontSize: n(20),
+        marginBottom: n(6),
+        letterSpacing: n(0.5),
         fontWeight: '600',
-        marginBottom: 6,
-        letterSpacing: 0.5,
         color: colors.dark_swampy,
     },
     textAreaContainer: {
         width: '100%',
         flexDirection: 'row',
         alignItems: 'center',
-        paddingVertical: 15,
-        paddingLeft: 25,
-        paddingRight: 20,
-        borderRadius: 15,
+        paddingVertical: n(15),
+        paddingLeft: n(25),
+        paddingRight: n(20),
+        borderRadius: n(15),
         backgroundColor: '#F0F0F0',
     },
     textArea: {
         width: '100%',
-        minHeight: 125,
+        minHeight: n(125),
         justifyContent: 'flex-start',
         textAlignVertical: 'top',
         color: '#686866',
-        fontSize: 17,
+        fontSize: n(17),
     },
 })

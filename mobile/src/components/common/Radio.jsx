@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import { Field } from 'formik'
+import { n } from '../../utils/normalize'
 
 export default function Radio({ name, items }) {
     return (
@@ -35,26 +36,26 @@ const styles = StyleSheet.create({
         width: '50%',
         flexDirection: 'row',
         alignItems: 'center',
-        marginVertical: 3,
+        marginVertical: n(3),
     },
     button: {
         justifyContent: 'center',
         alignItems: 'center',
-        width: 26,
-        height: 26,
+        width: n(26),
+        height: n(26),
         backgroundColor: '#F0F0F0',
-        borderRadius: 50,
+        borderRadius: n(50),
     },
     buttonActive: {
-        width: 26,
-        height: 26,
+        width: n(26),
+        height: n(26),
         borderStyle: 'solid',
-        borderWidth: 9,
+        borderWidth: n(9),
         borderColor: '#223263',
-        borderRadius: 50,
+        borderRadius: n(50),
     },
     buttonText: {
-        fontSize: 16,
-        marginLeft: 9,
+        fontSize: n(16),
+        marginLeft: n(9),
     },
 })
