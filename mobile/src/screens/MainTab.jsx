@@ -1,64 +1,36 @@
-import React, { useContext } from 'react'
-import { StyleSheet, Text, View, ScrollView, StatusBar, TouchableOpacity } from 'react-native'
-import * as Icon from 'react-native-feather'
-import { useNavigation } from '@react-navigation/native'
-import { useTabBarHeader } from '../hooks/helpers'
-import { GlobalContext } from '../contexts/GlobalContext'
-import { COLORS } from '../colors'
+import React from 'react'
+import { StyleSheet, Text, View, ScrollView, StatusBar } from 'react-native'
+import MainCards from '../components/MainCards'
+import { colors } from '../utils/colors'
 
 export default function MainScreen() {
-    const { user } = useContext(GlobalContext)
-    const navigation = useNavigation()
-
-    useTabBarHeader({
-        title: null,
-        headerLeft: () => (
-            <Text style={styles.headerLeft}>Привет, <Text style={styles.firstName}>{user.firstName}</Text></Text>
-        ),
-        headerRight: () => (
-            <TouchableOpacity>
-                <Icon.Bell style={styles.headerRight} color={COLORS.MAIN} />
-            </TouchableOpacity>
-        ),
-        cardStyle: { backgroundColor: COLORS.WHITE },
-    }, [])
-
     return (
         <ScrollView showsVerticalScrollIndicator={false}>
-            <StatusBar backgroundColor="#f2f2f2" barStyle="dark-content" />
+            <StatusBar backgroundColor="white" barStyle="dark-content" />
 
-            <View style={styles.services}>
-                <Text>asdasd</Text>
+            <View style={styles.wrapper}>
+                <Text style={styles.mainTitle}>Saxovat!</Text>
+                <Text style={styles.mainSubtitle}>xayriya turini belgilang</Text>
+                <MainCards />
             </View>
         </ScrollView>
     )
 }
 
 const styles = StyleSheet.create({
-    headerLeft: {
-        marginLeft: 15,
-        color: '#223263',
-        fontSize: 21,
-        fontWeight: 'bold',
+    wrapper: {
+        backgroundColor: 'white',
+        paddingHorizontal: 28,
+        paddingTop: 12,
     },
-    firstName: {
-        fontWeight: 'normal',
+    mainTitle: {
+        color: colors.swampy,
+        fontSize: 42,
+        fontWeight: '700',
     },
-    headerRight: {
-        marginRight: 15,
-    },
-    services: {
-        backgroundColor: '#fff',
-        borderTopLeftRadius: 30,
-        borderTopRightRadius: 30,
-    },
-    notificationsCount: {
-        backgroundColor: 'red',
-        height: 12,
-        width: 12,
-        borderRadius: 100,
-        position: 'absolute',
-        left: 14,
-        bottom: 15,
+    mainSubtitle: {
+        color: colors.gray,
+        fontSize: 24,
+        fontWeight: '400',
     },
 })

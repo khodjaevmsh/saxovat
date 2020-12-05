@@ -2,7 +2,7 @@ import Constants from 'expo-constants'
 
 const ENV = {
     dev: {
-        BASE_URL: '',
+        BASE_URL: 'https://a59c1d216560.ngrok.io',
     },
     staging: {
         BASE_URL: '',

@@ -1,6 +1,9 @@
-export const COLORS = {
-    MAIN: '#223263',
-    SECONDARY: '#F18C44',
+export const colors = {
+    blue: '#006D77',
+    yellow: '#FFC542',
+    grey: '#F2F2F2',
+    swampy: '#1A3B34',
+    gray: '#96A7AF',
     LIGHT_GREY: '#C4C4C4',
     DARK_GREY: '#828282',
     WHITE: '#fff',
