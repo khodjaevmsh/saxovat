@@ -2,6 +2,7 @@ import React from 'react'
 import { View, StyleSheet, TextInput, Text } from 'react-native'
 import { Field } from 'formik'
 import { TextInputMask } from 'react-native-masked-text'
+import { colors } from '../../utils/colors'
 
 export default function Input({
     label,
@@ -82,6 +83,7 @@ const styles = StyleSheet.create({
         fontWeight: '600',
         marginBottom: 10,
         letterSpacing: 0.5,
+        color: colors.dark_swampy,
     },
     wrapper: {
         height: 66,
