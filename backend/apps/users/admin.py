@@ -6,6 +6,9 @@ from users.models import User
 
 @admin.register(User)
 class UserAdmin(UserAdmin):
-    fieldsets = UserAdmin.fieldsets
-    add_fieldsets = UserAdmin.add_fieldsets
-    list_display = UserAdmin.list_display
+    def save_model(self, request, obj, form, change):
+        if change:
+            obj.updated_by = request.user
+        else:
+            obj.created_by = request.user
+        super().save_model(request, obj, form, change)

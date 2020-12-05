@@ -29,10 +29,7 @@ TESTING = ('test' == sys.argv[1]) if sys.argv else False
 # Append module dir
 sys.path.append(os.path.join(BASE_DIR, 'apps'))
 
-ALLOWED_HOSTS = [
-    'localhost',
-    '127.0.0.1',
-]
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -126,6 +123,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_THOUSAND_SEPARATOR = True
+
+SEND_CONFIRMATION_SMS = ''
 
 USE_TZ = not TESTING
 
