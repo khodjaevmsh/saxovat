@@ -36,7 +36,7 @@ export default function Recipient() {
 
             <View style={{ display: 'flex' }}>
                 {cards.map((item) => (
-                    <TouchableOpacity activeOpacity={0.6} onPress={() => navigation.navigate('ToWhomDetail')}>
+                    <TouchableOpacity activeOpacity={0.7} onPress={() => navigation.navigate('ToWhomDetail')}>
                         <View style={{ ...styles.box, backgroundColor: item.backgroundColor }}>
                             <View style={{ ...styles.iconHome, backgroundColor: item.iconColor[0] }}>
                                 {item.icon}
