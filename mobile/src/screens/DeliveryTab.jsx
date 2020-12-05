@@ -93,15 +93,6 @@ const styles = StyleSheet.create({
         display: 'flex',
         justifyContent: 'center',
     },
-    iconHome: {
-        // color: 'white',
-        // borderRadius: 12,
-        // width: 65,
-        // height: 63,
-        // display: 'flex',
-        // justifyContent: 'center',
-        // alignItems: 'center',
-    },
     title: {
         fontSize: n(38),
         fontWeight: 'bold',
