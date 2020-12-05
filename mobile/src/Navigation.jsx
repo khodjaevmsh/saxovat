@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import * as Icon from 'react-native-feather'
+import { backgroundColor } from 'react-native-calendars/src/style'
 import { colors } from './utils/colors'
 
 import { GlobalContext } from './contexts/GlobalContext'
@@ -13,6 +14,7 @@ import MainTab from './screens/MainTab'
 import RecipientTab from './screens/RecipientTab'
 import Recipient from './screens/Recipient'
 import DeliveryTab from './screens/DeliveryTab'
+import ToWhomDetail from './screens/ToWhomDetail'
 
 const Stack = createStackNavigator()
 const Tab = createBottomTabNavigator()
@@ -26,6 +28,15 @@ export default function Navigation() {
             <Stack.Navigator initialRouteName={initial} screenOptions={{ headerStyle: styles.stackHeader }}>
                 <Stack.Screen name="TabScreen" component={TabScreen} options={{ headerShown: false }} />
                 <Stack.Screen name="Recipient" component={Recipient} options={{ headerShown: false }} />
+                <Stack.Screen name="ToWhomDetail" component={ToWhomDetail} options={{
+                    headerShown: true,
+                    title: null,
+                    headerStyle: { shadowColor: 'transparent' },
+                    headerBackTitle: null,
+                    headerTruncatedBackTitle: null,
+                    cardStyle: { backgroundColor: colors.WHITE },
+                    headerBackImage: () => <Icon.ChevronLeft color={colors.WHITER} width={70} height={40} />,
+                }} />
             </Stack.Navigator>
         </NavigationContainer>
     )

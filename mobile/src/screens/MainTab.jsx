@@ -1,20 +1,21 @@
 import React from 'react'
 import { StyleSheet, Text, View, ScrollView, StatusBar } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 import MainCards from '../components/MainCards'
 import Foundations from '../components/FondCard'
 import { colors } from '../utils/colors'
 
 export default function MainScreen() {
+    const navigation = useNavigation()
     return (
         <ScrollView showsVerticalScrollIndicator={false}>
             <StatusBar backgroundColor="white" barStyle="dark-content" />
-
             <View style={styles.wrapper}>
                 <Text style={styles.mainTitle}>Saxovat!</Text>
-                <Text style={styles.mainSubtitle}>xayriya turini belgilang</Text>
-
+                <Text style={styles.mainSubtitle} onPress={() => navigation.navigate('ToWhomDetail')}>
+                    xayriya turini belgilang
+                </Text>
                 <MainCards />
-
                 <Foundations />
             </View>
         </ScrollView>
