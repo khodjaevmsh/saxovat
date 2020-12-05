@@ -9,7 +9,7 @@ export default function DeliveryScreen() {
     const cards = [{ text: 'Mehribonlik uylari' }, { text: 'Kiyim-kechak' }, { text: 'Dori mahsulotlari' }]
 
     return (
-        <Container style={{ paddingTop: n(20) }}>
+        <Container>
             <ScrollView showsVerticalScrollIndicator={false}>
                 <StatusBar backgroundColor="white" barStyle="dark-content" />
 
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     title: {
-        fontSize: n(42),
+        fontSize: n(38),
         fontWeight: 'bold',
         color: colors.dark_swampy,
     },

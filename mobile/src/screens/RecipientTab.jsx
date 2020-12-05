@@ -4,7 +4,7 @@ import RecipientForm from '../components/RecipientForm'
 import { colors } from '../utils/colors'
 import { n } from '../utils/normalize'
 
-export default function RecipientScreen() {
+export default function RecipientTab() {
     return (
         <ScrollView showsVerticalScrollIndicator={false} style={{ paddingTop: n(20) }}>
             <StatusBar backgroundColor="white" barStyle="dark-content" />
@@ -27,17 +27,17 @@ const styles = StyleSheet.create({
     },
     wrapper: {
         backgroundColor: 'white',
-        paddingHorizontal: 28,
-        paddingTop: 24,
+        paddingHorizontal: n(28),
+        paddingTop: n(24),
     },
     mainTitle: {
         color: colors.dark_swampy,
-        fontSize: 38,
+        fontSize: n(38),
         fontWeight: '700',
     },
     mainSubtitle: {
         color: colors.gray,
-        fontSize: 22,
+        fontSize: n(22),
         fontWeight: '400',
     },
 })

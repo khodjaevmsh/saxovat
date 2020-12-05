@@ -19,12 +19,7 @@ export default function Confirm({ route }) {
     async function onSubmit(data) {
         setServerError('')
 
-        const { error, response } = await signIn.request({
-            data: {
-                ...data,
-                phone,
-            },
-        })
+        const { error, response } = await signIn.request({ data: { ...data, phone } })
 
         if (error) {
             setServerError(error)
