@@ -13,6 +13,7 @@ import RecipientTab from './screens/RecipientTab'
 import Recipient from './screens/Recipient'
 import DeliveryTab from './screens/DeliveryTab'
 import ToWhomDetail from './screens/ToWhomDetail'
+import Food from './screens/Food'
 
 const Stack = createStackNavigator()
 const Tab = createBottomTabNavigator()

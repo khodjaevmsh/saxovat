@@ -11,10 +11,9 @@ export default function MainScreen() {
         <ScrollView showsVerticalScrollIndicator={false}>
             <StatusBar backgroundColor="white" barStyle="dark-content" />
             <View style={styles.wrapper}>
-                <Text style={styles.mainTitle}>Saxovat!</Text>
-                <Text>
-                    xayriya turini belgilang
-                </Text>
+                <Text style={styles.mainTitle} onPress={() => navigation.navigate('Food')}>Saxovat!</Text>
+                <Text style={styles.mainSubtitle}>xayriya turini belgilang</Text>
+
                 <MainCards />
             </View>
 

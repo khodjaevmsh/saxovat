@@ -7,6 +7,7 @@ import ButtonLikeInput from '../components/common/ButtonLikeInput'
 import Input from '../components/common/Input'
 import Button from '../components/common/Button'
 import { colors } from '../utils/colors'
+import { n } from '../utils/normalize'
 
 export default function Money() {
     const navigation = useNavigation()
@@ -16,13 +17,13 @@ export default function Money() {
     }
 
     return (
-        <Container>
+        <Container style={{ flex: 1 }}>
             <Text style={styles.title}>Mablag’ o’tkazish</Text>
             <Text style={styles.subTitle}>o’tkazma ma’lumotlarini kiriting</Text>
 
             <Formik onSubmit={onSubmit} initialValues={{ address: '', amount: '' }}>
                 {({ handleSubmit }) => (
-                    <View>
+                    <View style={{ flex: 1 }}>
                         <ButtonLikeInput
                             label="Kimga"
                             title="Mehribonlik uyi №15"
@@ -37,7 +38,9 @@ export default function Money() {
                             placeholder="25 000"
                             maxLength={55} />
 
-                        <Button style={styles.button} onPress={handleSubmit} title="Yuborish" />
+                        <View style={styles.button}>
+                            <Button onPress={handleSubmit} title="Yuborish" />
+                        </View>
                     </View>
                 )}
             </Formik>
@@ -47,17 +50,21 @@ export default function Money() {
 
 const styles = StyleSheet.create({
     title: {
-        fontSize: 42,
+        fontSize: n(42),
         fontWeight: 'bold',
         color: colors.dark_swampy,
     },
     subTitle: {
-        fontSize: 24,
+        fontSize: n(24),
         fontWeight: '400',
-        marginBottom: 20,
+        marginBottom: n(20),
         color: colors.light_gray,
     },
     button: {
-        marginTop: 40,
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        right: 0,
+        justifyContent: 'flex-end',
     },
 })
