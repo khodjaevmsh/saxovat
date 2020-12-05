@@ -38,7 +38,7 @@ function TabScreen() {
                 tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} icon={Icon.Home} />,
             }} />
             <Tab.Screen name="RecipientTab" component={RecipientTab} options={{
-                tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} icon={Icon.User} />,
+                tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} icon={Icon.UserPlus} />,
             }} />
             <Tab.Screen name="DeliveryTab" component={DeliveryTab} options={{
                 tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} icon={Icon.Truck} />,
