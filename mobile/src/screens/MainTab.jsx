@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
         paddingTop: n(24),
     },
     mainTitle: {
-        color: colors.swampy,
+        color: colors.dark_swampy,
         fontSize: n(38),
         fontWeight: '700',
     },

@@ -6,7 +6,7 @@ import { n } from '../utils/normalize'
 
 export default function RecipientScreen() {
     return (
-        <ScrollView showsVerticalScrollIndicator={false}>
+        <ScrollView showsVerticalScrollIndicator={false} style={{ paddingTop: n(20) }}>
             <StatusBar backgroundColor="white" barStyle="dark-content" />
 
             <View style={styles.wrapper}>
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
         paddingTop: 24,
     },
     mainTitle: {
-        color: colors.swampy,
+        color: colors.dark_swampy,
         fontSize: 38,
         fontWeight: '700',
     },

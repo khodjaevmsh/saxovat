@@ -4,8 +4,8 @@ import { Formik } from 'formik'
 import Input from './common/Input'
 import Button from './common/Button'
 import TextArea from './common/TextArea'
-import Radio from './common/Radio'
 import { n } from '../utils/normalize'
+import Radio from './common/Radio'
 
 export default function RecipientForm() {
     const categories = [
@@ -76,7 +76,7 @@ export default function RecipientForm() {
 
 const styles = StyleSheet.create({
     input: {
-        marginVertical: 5,
+        marginVertical: n(5),
     },
     inputText: {
         fontWeight: 'bold',
