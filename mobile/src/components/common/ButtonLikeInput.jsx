@@ -2,6 +2,7 @@ import React from 'react'
 import { StyleSheet, View } from 'react-native'
 import * as Icon from 'react-native-feather'
 import Button from './Button'
+import { n } from '../../utils/normalize'
 
 export default function ButtonLikeInput({ title, onPress, styleText, error, label }) {
     return (
@@ -27,13 +28,13 @@ export default function ButtonLikeInput({ title, onPress, styleText, error, labe
 
 const styles = StyleSheet.create({
     button: {
-        paddingHorizontal: 10,
+        paddingHorizontal: n(10),
         alignItems: 'flex-start',
         backgroundColor: '#F0F0F0',
-        borderRadius: 15,
+        borderRadius: n(15),
         borderColor: '#223263',
     },
     text: {
-        fontSize: 17,
+        fontSize: n(17),
     },
 })

@@ -13,7 +13,8 @@ import RecipientTab from './screens/RecipientTab'
 import Recipient from './screens/Recipient'
 import DeliveryTab from './screens/DeliveryTab'
 import ToWhomDetail from './screens/ToWhomDetail'
-import Food from './screens/Food'
+import PaymentType from './screens/PaymentType'
+import { n } from './utils/normalize'
 
 const Stack = createStackNavigator()
 const Tab = createBottomTabNavigator()
@@ -29,22 +30,35 @@ export default function Navigation() {
                 <Stack.Screen name="ToWhomDetail" component={ToWhomDetail} options={{
                     headerShown: true,
                     title: null,
-                    headerStyle: { shadowColor: 'transparent' },
                     headerBackTitle: null,
                     headerTruncatedBackTitle: null,
-                    cardStyle: { backgroundColor: colors.WHITE },
-                    headerBackImage: () => <Icon.ChevronLeft color={colors.WHITER} width={70} height={40} />,
+                    headerBackImage: () => <Icon.ChevronLeft color={colors.WHITER} width={n(70)} height={n(40)} />,
                 }} />
+
                 <Stack.Screen name="Money" component={Money} options={{
-                    title: '',
-                    headerBackImage: () => (<Icon.ChevronLeft color={colors.gray} />),
-                    headerBackTitle: 'Orqaga',
+                    headerShown: true,
+                    title: null,
+                    headerBackTitle: null,
+                    headerTruncatedBackTitle: null,
+                    headerBackImage: () => <Icon.ChevronLeft color={colors.WHITER} width={n(70)} height={n(40)} />,
                 }} />
+
                 <Stack.Screen name="Recipient" component={Recipient} options={{
-                    title: '',
-                    headerBackImage: () => (<Icon.ChevronLeft color={colors.gray} />),
-                    headerBackTitle: 'Orqaga',
+                    headerShown: true,
+                    title: null,
+                    headerBackTitle: null,
+                    headerTruncatedBackTitle: null,
+                    headerBackImage: () => <Icon.ChevronLeft color={colors.WHITER} width={n(70)} height={n(40)} />,
                 }} />
+
+                <Stack.Screen name="PaymentType" component={PaymentType} options={{
+                    headerShown: true,
+                    title: null,
+                    headerBackTitle: null,
+                    headerTruncatedBackTitle: null,
+                    headerBackImage: () => <Icon.ChevronLeft color={colors.WHITER} width={n(70)} height={n(40)} />,
+                }} />
+
             </Stack.Navigator>
         </NavigationContainer>
     )
@@ -70,10 +84,10 @@ const styles = StyleSheet.create({
     tabHeader: {
         backgroundColor: colors.blue,
         width: '100%',
-        height: 70,
-        paddingHorizontal: 30,
-        borderTopLeftRadius: 30,
-        borderTopRightRadius: 30,
+        height: '12%',
+        paddingHorizontal: n(30),
+        borderTopLeftRadius: n(30),
+        borderTopRightRadius: n(30),
     },
     stackHeader: {
         backgroundColor: 'white',

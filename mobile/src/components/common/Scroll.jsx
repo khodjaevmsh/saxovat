@@ -1,12 +1,13 @@
 import React from 'react'
 import { ScrollView } from 'react-native'
+import { n } from '../../utils/normalize'
 
 export default function Scroll({
     items,
     renderItem,
     horizontal = false,
     paging = false,
-    interval = 100,
+    interval = n(100),
     classes,
     horizontalScrollIndicator = false,
 }) {
@@ -15,7 +16,7 @@ export default function Scroll({
             horizontal={horizontal}
             pagingEnabled={paging}
             snapToInterval={interval}
-            contentContainerStyle={{ paddingHorizontal: 28, ...classes }}
+            contentContainerStyle={{ paddingHorizontal: n(28), ...classes }}
             showsHorizontalScrollIndicator={horizontalScrollIndicator}>
             {items.map(renderItem)}
         </ScrollView>

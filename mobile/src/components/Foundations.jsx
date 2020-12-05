@@ -6,6 +6,7 @@ import { colors } from '../utils/colors'
 import fund1 from '../assets/fund1.jpg'
 import fund2 from '../assets/fund2.jpg'
 import fund3 from '../assets/fund3.jpg'
+import { n } from '../utils/normalize'
 
 export default function Foundations() {
     const foundations = [
@@ -35,14 +36,14 @@ export default function Foundations() {
 
 const styles = StyleSheet.create({
     wrapper: {
-        paddingVertical: 20,
+        paddingVertical: n(20),
         backgroundColor: colors.grey,
     },
     label: {
-        paddingHorizontal: 28,
+        paddingHorizontal: n(28),
         color: colors.swampy,
-        fontSize: 18,
+        fontSize: n(18),
         fontWeight: 'bold',
-        marginBottom: 16,
+        marginBottom: n(16),
     },
 })

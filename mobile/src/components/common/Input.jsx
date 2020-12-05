@@ -3,6 +3,7 @@ import { View, StyleSheet, TextInput, Text } from 'react-native'
 import { Field } from 'formik'
 import { TextInputMask } from 'react-native-masked-text'
 import { colors } from '../../utils/colors'
+import { n } from '../../utils/normalize'
 
 export default function Input({
     label,
@@ -29,7 +30,7 @@ export default function Input({
             <Field name={name} validate={validate}>
                 {({ field, form }) => (
                     <View style={form.errors[name] ? {
-                        borderWidth: 1,
+                        borderWidth: n(1),
                         borderColor: 'red',
                         borderStyle: 'solid',
                         ...styles.wrapper,
@@ -79,28 +80,28 @@ export default function Input({
 
 const styles = StyleSheet.create({
     label: {
-        fontSize: 20,
+        fontSize: n(20),
         fontWeight: '600',
-        marginBottom: 10,
-        letterSpacing: 0.5,
+        marginBottom: n(10),
+        letterSpacing: n(0.5),
         color: colors.dark_swampy,
     },
     wrapper: {
-        height: 66,
+        height: n(66),
         width: '100%',
         flexDirection: 'row',
         alignItems: 'center',
-        paddingHorizontal: 25,
-        paddingRight: 40,
-        borderRadius: 15,
+        paddingHorizontal: n(25),
+        paddingRight: n(40),
+        borderRadius: n(15),
         backgroundColor: '#F0F0F0',
     },
     leftBlock: {
-        marginRight: 20,
+        marginRight: n(20),
     },
     inputStyle: {
         width: '100%',
-        fontSize: 17,
+        fontSize: n(17),
         color: 'black',
     },
 })

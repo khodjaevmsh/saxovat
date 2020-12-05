@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View, ScrollView, StatusBar } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
+import { n } from '../utils/normalize'
 
 export default function DeliveryScreen() {
     const navigation = useNavigation()
@@ -19,7 +20,7 @@ export default function DeliveryScreen() {
 const styles = StyleSheet.create({
     services: {
         backgroundColor: '#fff',
-        borderTopLeftRadius: 30,
-        borderTopRightRadius: 30,
+        borderTopLeftRadius: n(30),
+        borderTopRightRadius: n(30),
     },
 })

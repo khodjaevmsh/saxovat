@@ -4,11 +4,13 @@ import { useNavigation } from '@react-navigation/native'
 import MainCards from '../components/MainCards'
 import Foundations from '../components/Foundations'
 import { colors } from '../utils/colors'
+import { n } from '../utils/normalize'
 
 export default function MainScreen() {
     const navigation = useNavigation()
+
     return (
-        <ScrollView showsVerticalScrollIndicator={false}>
+        <ScrollView showsVerticalScrollIndicator={false} style={{ paddingTop: n(20) }}>
             <StatusBar backgroundColor="white" barStyle="dark-content" />
             <View style={styles.wrapper}>
                 <Text style={styles.mainTitle} onPress={() => navigation.navigate('Food')}>Saxovat!</Text>
@@ -25,17 +27,17 @@ export default function MainScreen() {
 const styles = StyleSheet.create({
     wrapper: {
         backgroundColor: 'white',
-        paddingHorizontal: 28,
-        paddingTop: 12,
+        paddingHorizontal: n(28),
+        paddingTop: n(12),
     },
     mainTitle: {
         color: colors.swampy,
-        fontSize: 42,
+        fontSize: n(42),
         fontWeight: '700',
     },
     mainSubtitle: {
         color: colors.gray,
-        fontSize: 24,
+        fontSize: n(24),
         fontWeight: '400',
     },
 })

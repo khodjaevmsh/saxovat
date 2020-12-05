@@ -2,6 +2,7 @@ import React from 'react'
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import * as Icon from 'react-native-feather'
 import { useNavigation } from '@react-navigation/native'
+import { n } from '../utils/normalize'
 
 export default function Recipient() {
     const navigation = useNavigation()
@@ -32,7 +33,7 @@ export default function Recipient() {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Kimga</Text>
-            <Text style={{ color: '#96A7AF', marginBottom: 20 }}>qabul qiluvchini tanlang</Text>
+            <Text style={{ color: '#96A7AF', marginBottom: n(20) }}>qabul qiluvchini tanlang</Text>
 
             <View style={{ display: 'flex' }}>
                 {cards.map((item) => (
@@ -62,30 +63,30 @@ export default function Recipient() {
 
 const styles = StyleSheet.create({
     container: {
-        marginHorizontal: 20,
+        marginHorizontal: n(20),
     },
     text: {
-        paddingHorizontal: 20,
+        paddingHorizontal: n(20),
         display: 'flex',
         justifyContent: 'center',
     },
     title: {
-        fontSize: 32,
+        fontSize: n(32),
         color: '#1A3B34',
     },
     iconHome: {
         color: 'white',
-        borderRadius: 12,
-        width: 65,
-        height: 63,
+        borderRadius: n(12),
+        width: n(65),
+        height: n(63),
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
     },
     iconRight: {
-        borderRadius: 50,
-        width: 50,
-        height: 50,
+        borderRadius: n(50),
+        width: n(50),
+        height: n(50),
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -93,9 +94,9 @@ const styles = StyleSheet.create({
     box: {
         flexDirection: 'row',
         width: '100%',
-        padding: 20,
-        borderRadius: 25,
+        padding: n(20),
+        borderRadius: n(25),
         justifyContent: 'flex-start',
-        marginBottom: 15,
+        marginBottom: n(15),
     },
 })
