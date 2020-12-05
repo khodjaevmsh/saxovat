@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     label: {
         fontSize: n(20),
         marginBottom: n(6),
-        letterSpacing: n(0.5),
+        letterSpacing: 0.5,
         fontWeight: '600',
         color: colors.dark_swampy,
     },
