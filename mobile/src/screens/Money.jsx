@@ -17,7 +17,7 @@ export default function Money() {
     }
 
     return (
-        <Container>
+        <Container style={{ flex: 1 }}>
             <Text style={styles.title}>Mablag’ o’tkazish</Text>
             <Text style={styles.subTitle}>o’tkazma ma’lumotlarini kiriting</Text>
 
@@ -38,7 +38,9 @@ export default function Money() {
                             placeholder="25 000"
                             maxLength={55} />
 
-                        <Button style={styles.button} onPress={handleSubmit} title="Yuborish" />
+                        <View style={styles.button}>
+                            <Button onPress={handleSubmit} title="Yuborish" />
+                        </View>
                     </View>
                 )}
             </Formik>
@@ -59,6 +61,7 @@ const styles = StyleSheet.create({
         color: colors.light_gray,
     },
     button: {
+        justifyContent: 'flex-end',
         marginTop: n(40),
     },
 })
