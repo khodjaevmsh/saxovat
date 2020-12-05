@@ -10,5 +10,5 @@ export const colors = {
     WHITE: '#fff',
     WHITER: '#E5E5E5',
     DANGER: '#E71A1A',
-    PRIMARY: '#395097',
+    PRIMARY: '#223263',
 }

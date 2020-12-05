@@ -17,13 +17,13 @@ export default function Money() {
     }
 
     return (
-        <Container>
+        <Container style={{ flex: 1 }}>
             <Text style={styles.title}>Mablag’ o’tkazish</Text>
             <Text style={styles.subTitle}>o’tkazma ma’lumotlarini kiriting</Text>
 
             <Formik onSubmit={onSubmit} initialValues={{ address: '', amount: '' }}>
                 {({ handleSubmit }) => (
-                    <View>
+                    <View style={{ flex: 1 }}>
                         <ButtonLikeInput
                             label="Kimga"
                             title="Mehribonlik uyi №15"
@@ -38,7 +38,9 @@ export default function Money() {
                             placeholder="25 000"
                             maxLength={55} />
 
-                        <Button style={styles.button} onPress={handleSubmit} title="Yuborish" />
+                        <View style={styles.button}>
+                            <Button onPress={handleSubmit} title="Yuborish" />
+                        </View>
                     </View>
                 )}
             </Formik>
@@ -59,6 +61,10 @@ const styles = StyleSheet.create({
         color: colors.light_gray,
     },
     button: {
-        marginTop: n(40),
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        right: 0,
+        justifyContent: 'flex-end',
     },
 })
