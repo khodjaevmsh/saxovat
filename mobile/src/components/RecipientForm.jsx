@@ -4,6 +4,7 @@ import { Formik } from 'formik'
 import Input from './common/Input'
 import Button from './common/Button'
 import TextArea from './common/TextArea'
+import { n } from '../utils/normalize'
 
 export default function RecipientForm() {
     function onSubmit() {
@@ -65,7 +66,7 @@ export default function RecipientForm() {
 
 const styles = StyleSheet.create({
     input: {
-        marginVertical: 5,
+        marginVertical: n(5),
     },
     inputText: {
         fontWeight: 'bold',

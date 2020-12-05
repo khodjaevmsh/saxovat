@@ -13,13 +13,13 @@ export default function PaymentType() {
     const payment = [
         {
             id: 1,
-            image: <Payme width={28} />,
+            image: <Payme width={n(28)} />,
             text: 'Payme',
             color: colors.till,
         },
         {
             id: 2,
-            image: <Click width={28} />,
+            image: <Click width={n(28)} />,
             text: 'Click',
             color: colors.light_blue,
         },
