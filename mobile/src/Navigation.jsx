@@ -11,6 +11,7 @@ import { GlobalContext } from './contexts/GlobalContext'
 import TabBarIcon from './components/common/TabBarIcon'
 import MainTab from './screens/MainTab'
 import RecipientTab from './screens/RecipientTab'
+import Recipient from './screens/Recipient'
 import DeliveryTab from './screens/DeliveryTab'
 
 const Stack = createStackNavigator()
@@ -24,6 +25,7 @@ export default function Navigation() {
         <NavigationContainer>
             <Stack.Navigator initialRouteName={initial} screenOptions={{ headerStyle: styles.stackHeader }}>
                 <Stack.Screen name="TabScreen" component={TabScreen} options={{ headerShown: false }} />
+                <Stack.Screen name="Recipient" component={Recipient} options={{ headerShown: false }} />
             </Stack.Navigator>
         </NavigationContainer>
     )

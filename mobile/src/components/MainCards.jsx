@@ -1,20 +1,21 @@
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { View } from 'react-native'
 import * as Icon from 'react-native-feather'
 import { RedCard, YellowCard, GreenCard } from './Svgs'
-import { colors } from '../utils/colors'
 
 export default function MainCards() {
     return (
-        <View style={styles.wrapper}>
+        <View>
             <View>
                 <RedCard width="100%" />
-                <Icon icon={Icon.Truck} />
+                <Icon.Truck />
             </View>
-            <View style={styles.flex}>
+
+            <View>
                 <View>
                     <YellowCard />
                 </View>
+
                 <View>
                     <GreenCard />
                 </View>
@@ -22,9 +23,3 @@ export default function MainCards() {
         </View>
     )
 }
-
-const styles = StyleSheet.create({
-    wrapper: {
-
-    },
-})
