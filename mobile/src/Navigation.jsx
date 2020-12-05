@@ -12,6 +12,7 @@ import Money from './screens/Money'
 import RecipientTab from './screens/RecipientTab'
 import Recipient from './screens/Recipient'
 import DeliveryTab from './screens/DeliveryTab'
+import ToWhomDetail from './screens/ToWhomDetail'
 import Food from './screens/Food'
 
 const Stack = createStackNavigator()
@@ -25,17 +26,21 @@ export default function Navigation() {
         <NavigationContainer theme={{ colors: { background: 'white' } }}>
             <Stack.Navigator initialRouteName={initial} screenOptions={{ headerStyle: styles.stackHeader }}>
                 <Stack.Screen name="TabScreen" component={TabScreen} options={{ headerShown: false }} />
+                <Stack.Screen name="ToWhomDetail" component={ToWhomDetail} options={{
+                    headerShown: true,
+                    title: null,
+                    headerStyle: { shadowColor: 'transparent' },
+                    headerBackTitle: null,
+                    headerTruncatedBackTitle: null,
+                    cardStyle: { backgroundColor: colors.WHITE },
+                    headerBackImage: () => <Icon.ChevronLeft color={colors.WHITER} width={70} height={40} />,
+                }} />
                 <Stack.Screen name="Money" component={Money} options={{
                     title: '',
                     headerBackImage: () => (<Icon.ChevronLeft color={colors.gray} />),
                     headerBackTitle: 'Orqaga',
                 }} />
                 <Stack.Screen name="Recipient" component={Recipient} options={{
-                    title: '',
-                    headerBackImage: () => (<Icon.ChevronLeft color={colors.gray} />),
-                    headerBackTitle: 'Orqaga',
-                }} />
-                <Stack.Screen name="Food" component={Food} options={{
                     title: '',
                     headerBackImage: () => (<Icon.ChevronLeft color={colors.gray} />),
                     headerBackTitle: 'Orqaga',

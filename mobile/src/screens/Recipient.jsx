@@ -1,8 +1,10 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import * as Icon from 'react-native-feather'
+import { useNavigation } from '@react-navigation/native'
 
 export default function Recipient() {
+    const navigation = useNavigation()
     const cards = [
         {
             icon: <Icon.Home style={{ color: 'white' }} />,
@@ -34,22 +36,24 @@ export default function Recipient() {
 
             <View style={{ display: 'flex' }}>
                 {cards.map((item) => (
-                    <View style={{ ...styles.box, backgroundColor: item.backgroundColor }}>
-                        <View style={{ ...styles.iconHome, backgroundColor: item.iconColor[0] }}>
-                            {item.icon}
-                        </View>
+                    <TouchableOpacity activeOpacity={0.7} onPress={() => navigation.navigate('ToWhomDetail')}>
+                        <View style={{ ...styles.box, backgroundColor: item.backgroundColor }}>
+                            <View style={{ ...styles.iconHome, backgroundColor: item.iconColor[0] }}>
+                                {item.icon}
+                            </View>
 
-                        <View style={styles.text}>
-                            <Text style={{ color: item.iconColor[0] }}>{item.text}</Text>
-                            <Text style={{ color: item.iconColor[1] }}>{item.description}</Text>
-                        </View>
+                            <View style={styles.text}>
+                                <Text style={{ color: item.iconColor[0] }}>{item.text}</Text>
+                                <Text style={{ color: item.iconColor[1] }}>{item.description}</Text>
+                            </View>
 
-                        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'flex-end' }}>
-                            <View style={{ ...styles.iconRight, backgroundColor: item.iconColor[1] }}>
-                                <Icon.ChevronRight style={{ color: 'white' }} />
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'flex-end' }}>
+                                <View style={{ ...styles.iconRight, backgroundColor: item.iconColor[1] }}>
+                                    <Icon.ChevronRight style={{ color: 'white' }} />
+                                </View>
                             </View>
                         </View>
-                    </View>
+                    </TouchableOpacity>
                 ))}
             </View>
         </View>
