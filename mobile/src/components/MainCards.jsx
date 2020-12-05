@@ -1,12 +1,15 @@
 import React from 'react'
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
 import * as Icon from 'react-native-feather'
+import { useNavigation } from '@react-navigation/native'
 import { RedCard, YellowCard, GreenCard } from './Svgs'
 
 export default function MainCards() {
+    const navigation = useNavigation()
+
     return (
         <View style={styles.wrapper}>
-            <TouchableOpacity style={styles.block} activeOpacity={1}>
+            <TouchableOpacity style={styles.block} activeOpacity={1} onPress={() => navigation.navigate('Money')}>
                 <View style={styles.textWrapper}>
                     <Text style={styles.blockText}>Mablag’</Text>
                     <Text style={styles.blockText}>o’tkazish</Text>
