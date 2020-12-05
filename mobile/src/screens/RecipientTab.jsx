@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         borderTopLeftRadius: n(30),
         borderTopRightRadius: n(30),
+    },
     wrapper: {
         backgroundColor: 'white',
         paddingHorizontal: 28,
