@@ -66,7 +66,7 @@ export default function Navigation() {
 
 function TabScreen() {
     return (
-        <Tab.Navigator tabBarOptions={{ showLabel: false, style: styles.tabHeader, activeTintColor: '#e91e63' }}>
+        <Tab.Navigator tabBarOptions={{ style: styles.tabHeader, showLabel: false, keyboardHidesTabBar: true }}>
             <Tab.Screen name="MainTab" component={MainTab} options={{
                 tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} icon={Icon.Home} />,
             }} />

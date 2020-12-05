@@ -2,6 +2,7 @@ import React from 'react'
 import { View, StyleSheet, TextInput, Text } from 'react-native'
 import { Field } from 'formik'
 import { n } from '../../utils/normalize'
+import { colors } from '../../utils/colors'
 
 export default function TextArea({
     label,
@@ -25,8 +26,8 @@ export default function TextArea({
                         <TextInput
                             style={{ ...styles.textArea, ...style }}
                             keyboardType={keyboard}
-                            placeholder={placeholder}
                             maxLength={maxLength}
+                            placeholder={placeholder}
                             placeholderTextColor={placeholderTextColor}
                             numberOfLines={numberOfLines}
                             multiline={multiline}
@@ -42,9 +43,11 @@ export default function TextArea({
 
 const styles = StyleSheet.create({
     label: {
-        fontSize: n(16),
-        marginBottom: n(5),
+        fontSize: n(20),
+        marginBottom: n(6),
         letterSpacing: n(0.5),
+        fontWeight: '600',
+        color: colors.dark_swampy,
     },
     textAreaContainer: {
         width: '100%',

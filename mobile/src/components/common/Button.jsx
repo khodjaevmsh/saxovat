@@ -16,14 +16,14 @@ export default function Button({
 }) {
     return (
         <View style={styles.container}>
-            <Text style={styles.label}>{label}</Text>
+            {label ? <Text style={styles.label}>{label}</Text> : null}
 
             <TouchableOpacity onPress={onPress} style={{ ...styles.button, backgroundColor: color, ...style }}>
                 {loading ? <ActivityIndicator /> : (
                     <View style={styles.icon}>
                         {icon ? <View>{icon}</View> : null}
 
-                        <Text style={{ ...styles.text, ...textStyle, marginLeft: n(10) }}>
+                        <Text style={{ ...styles.text, ...textStyle }}>
                             {title}
                         </Text>
 
@@ -61,6 +61,7 @@ const styles = StyleSheet.create({
     text: {
         color: '#fff',
         fontSize: n(18),
+        fontWeight: 'bold',
     },
     iconRight: {
         flex: 1,
