@@ -23,7 +23,7 @@ export default function Navigation() {
     return (
         <NavigationContainer theme={{ colors: { background: 'white' } }}>
             <Stack.Navigator initialRouteName={initial} screenOptions={{ headerStyle: styles.stackHeader }}>
-                <Stack.Screen name="TabScreen" component={TabScreen} options={{ headerShown: true }} />
+                <Stack.Screen name="TabScreen" component={TabScreen} options={{ headerShown: false }} />
                 <Stack.Screen name="Money" component={Money} options={{
                     title: '',
                     headerBackImage: () => (<Icon.ChevronLeft color={colors.gray} />),
