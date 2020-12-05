@@ -13,11 +13,11 @@ export default function DeliveryScreen() {
 
             <View style={styles.services}>
                 <Text style={styles.title}>Yetqazib berish</Text>
-                <Text style={{ color: '#96A7AF', marginBottom: 20 }}>kerak bo’lgan xayriya mahsulotlari</Text>
+                <Text style={styles.subTitle}>kerak bo’lgan xayriya mahsulotlari</Text>
 
                 <View style={{ display: 'flex' }}>
-                    {cards.map((item) => (
-                        <View style={{ ...styles.box, backgroundColor: '#F0F0F0' }}>
+                    {cards.map((item, index) => (
+                        <View key={index} style={{ ...styles.box, backgroundColor: '#F0F0F0' }}>
                             <View>
                                 <Text style={{ fontSize: 18, marginBottom: 8, fontWeight: 'bold', color: 'black' }}>
                                     {item.text}
@@ -72,6 +72,17 @@ export default function DeliveryScreen() {
 }
 
 const styles = StyleSheet.create({
+    title: {
+        fontSize: n(42),
+        fontWeight: 'bold',
+        color: colors.swampy,
+    },
+    subTitle: {
+        fontSize: n(24),
+        fontWeight: '400',
+        marginBottom: n(20),
+        color: colors.light_gray,
+    },
     services: {
         backgroundColor: '#fff',
         borderTopLeftRadius: 30,
@@ -92,10 +103,5 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         display: 'flex',
         justifyContent: 'center',
-    },
-    title: {
-        fontSize: n(38),
-        fontWeight: 'bold',
-        color: colors.dark_swampy,
     },
 })
