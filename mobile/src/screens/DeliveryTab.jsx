@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { StyleSheet, Image, TouchableOpacity, Text, View, ScrollView, StatusBar } from 'react-native'
 import { n } from '../utils/normalize'
 import { colors } from '../utils/colors'
@@ -6,7 +6,8 @@ import Container from '../components/common/Container'
 import deliveryImage from '../assets/delivery.png'
 
 export default function DeliveryScreen() {
-    const cards = [{ text: 'Mehribonlik uylari' }, { text: 'Kiyim-kechak' }, { text: 'Dori mahsulotlari' }]
+    const cards = [{ text: 'Mehribonlik uylari' }]
+    const [delivery, setDelivery] = useState(false)
 
     return (
         <Container style={{ paddingTop: n(32) }}>
@@ -43,7 +44,7 @@ export default function DeliveryScreen() {
                                         </Text>
 
                                         <Text style={{ ...styles.iconHome, color: 'black' }}>
-                                            Sh. Rustaveli 15 uydan
+                                            Ш. Руставели 15 уй
                                         </Text>
                                     </View>
 
@@ -60,15 +61,18 @@ export default function DeliveryScreen() {
                                         </Text>
 
                                         <Text style={{ ...styles.iconHome, color: 'black' }}>
-                                            Mehribonlik uyi №15ga
+                                            21-сонли Меҳрибонлик
                                         </Text>
                                     </View>
                                 </View>
 
-                                <TouchableOpacity style={{ flex: 1, alignItems: 'flex-end' }}>
-                                    <View style={styles.status}>
+                                <TouchableOpacity
+                                    onPress={() => setDelivery(!delivery)} style={{ flex: 1, alignItems: 'flex-end' }}>
+                                    <View style={{ ...styles.status, backgroundColor: delivery ? 'red' : '#3ED598' }}>
                                         <Image source={deliveryImage} />
-                                        <Text style={{ color: 'white' }}>Yektazaman</Text>
+                                        <Text style={{ color: 'white' }}>
+                                            {delivery ? 'Yetkazilyapdi' : 'Yetkazaman'}
+                                        </Text>
                                     </View>
                                 </TouchableOpacity>
                             </View>
@@ -110,7 +114,6 @@ const styles = StyleSheet.create({
     },
     status: {
         flex: 1,
-        backgroundColor: '#3ED598',
         justifyContent: 'center',
         alignItems: 'center',
         height: n(91),
