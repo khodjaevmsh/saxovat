@@ -1,11 +1,20 @@
 import React from 'react'
+import { useNavigation } from '@react-navigation/native'
 import { StyleSheet, Text, View, ScrollView, StatusBar, TouchableOpacity } from 'react-native'
 import * as Icon from 'react-native-feather'
 import { colors } from '../utils/colors'
 import { n } from '../utils/normalize'
 import muhtojKishilar from '../data/muhtojKishilar.json'
 
-export default function ToWhomDetail() {
+export default function NeedyPeople({ route }) {
+    const { setFieldValue, to } = route.params
+    const navigation = useNavigation()
+
+    function selectHouse(data) {
+        setFieldValue('address', data.G1)
+        navigation.navigate(to)
+    }
+
     return (
         <ScrollView showsVerticalScrollIndicator={false}>
             <StatusBar backgroundColor="white" barStyle="dark-content" />
@@ -13,10 +22,10 @@ export default function ToWhomDetail() {
             <View style={styles.wrapper}>
                 <Text style={styles.mainTitle}>Muhtoj kishilar</Text>
                 <Text style={styles.mainSubtitle}>qabul qiluvchini tanlang</Text>
-                {muhtojKishilar.map((item, index) => (
-                    <TouchableOpacity key={index} opacity={0.7}>
+                {muhtojKishilar.map((house) => (
+                    <TouchableOpacity key={house.G1} onPress={() => selectHouse(house)} opacity={0.7}>
                         <View style={styles.card}>
-                            <Text style={styles.cardTitle}>{item.G1}, {item.G2}</Text>
+                            <Text style={styles.cardTitle}>{house.G1}, {house.G2}</Text>
                             <Icon.ChevronRight color="black" width={n(60)} height={n(30)} />
                         </View>
                     </TouchableOpacity>
