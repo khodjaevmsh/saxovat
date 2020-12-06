@@ -24,7 +24,10 @@ export default function MainCards() {
             </TouchableOpacity>
 
             <View style={styles.flex}>
-                <TouchableOpacity style={{ width: '46%', marginRight: '4%' }} activeOpacity={1}>
+                <TouchableOpacity
+                    onPress={() => navigation.navigate('Food')}
+                    style={{ width: '46%', marginRight: '4%' }}
+                    activeOpacity={1}>
                     <View style={styles.textWrapper}>
                         <Text style={styles.blockText}>Oziq</Text>
                         <Text style={styles.blockText}>ovqat</Text>

@@ -13,7 +13,7 @@ export default function Food() {
     const navigation = useNavigation()
 
     function onSubmit() {
-        console.log('onSubmit Money')
+        console.log('onSubmit Food')
     }
 
     const delivery = [
@@ -23,7 +23,7 @@ export default function Food() {
 
     return (
         <Container style={{ flex: 1 }}>
-            <ScrollView showsHorizontalScrollIndicator>
+            <ScrollView showsVerticalScrollIndicator={false}>
                 <Text style={styles.title}>Oziq ovqat</Text>
                 <Text style={styles.subTitle}>oziq-ovqat mahsulotlarini yuborish</Text>
 
@@ -40,7 +40,6 @@ export default function Food() {
                                 fontSize: n(20),
                                 fontWeight: '600',
                                 marginBottom: n(10),
-                                letterSpacing: n(0.5),
                             }}>
                                 Kim yetqazib beradi?
                             </Text>

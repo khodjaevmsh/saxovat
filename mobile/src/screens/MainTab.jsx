@@ -7,13 +7,11 @@ import { colors } from '../utils/colors'
 import { n } from '../utils/normalize'
 
 export default function MainScreen() {
-    const navigation = useNavigation()
-
     return (
         <ScrollView showsVerticalScrollIndicator={false} style={{ paddingTop: n(20) }}>
             <StatusBar backgroundColor="white" barStyle="dark-content" />
             <View style={styles.wrapper}>
-                <Text style={styles.mainTitle} onPress={() => navigation.navigate('Food')}>Saxovat!</Text>
+                <Text style={styles.mainTitle}>Saxovat!</Text>
                 <Text style={styles.mainSubtitle}>xayriya turini belgilang</Text>
 
                 <MainCards />

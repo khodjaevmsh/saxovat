@@ -34,6 +34,11 @@ export default function Navigation() {
                 <Stack.Screen name="TabScreen" component={TabScreen} options={{ headerShown: false }} />
                 <Stack.Screen name="Confirm" component={Confirm} options={{ headerShown: false }} />
                 <Stack.Screen name="Register" component={Register} options={{ headerShown: false }} />
+                <Stack.Screen name="Food" component={Food} options={{
+                    title: '',
+                    headerBackImage: () => (<Icon.ChevronLeft color={colors.gray} />),
+                    headerBackTitle: 'Orqaga',
+                }} />
                 <Stack.Screen name="ToWhomDetail" component={ToWhomDetail} options={{
                     headerShown: true,
                     title: null,
