@@ -48,8 +48,8 @@ export default function PaymentType() {
                                 {item.image}
                             </View>
 
-                            <View style={styles.text}>
-                                <Text>{item.text}</Text>
+                            <View style={styles.body}>
+                                <Text style={styles.text}>{item.text}</Text>
                             </View>
                         </View>
                     </TouchableOpacity>
@@ -72,9 +72,10 @@ const styles = StyleSheet.create({
         color: colors.light_gray,
     },
     text: {
-        fontSize: n(24),
+        fontSize: n(20),
         fontWeight: '600',
         justifyContent: 'center',
+        alignContent: 'center',
         marginLeft: n(20),
     },
     imageHome: {
@@ -94,5 +95,10 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
         marginBottom: n(15),
         backgroundColor: colors.grey,
+    },
+    body: {
+        flex: 1,
+        justifyContent: 'center',
+        alignContent: 'center',
     },
 })
