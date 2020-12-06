@@ -1,12 +1,21 @@
 import React from 'react'
 import { StyleSheet, Text, View, ScrollView, StatusBar, TouchableOpacity, Image } from 'react-native'
 import * as Icon from 'react-native-feather'
+import { useNavigation } from '@react-navigation/native'
 import { colors } from '../utils/colors'
 import { n } from '../utils/normalize'
 import XayriyaFondlari from '../data/XayriyaFondlari.json'
 import foundations from '../data/foundationsImage'
 
-export default function Charitable() {
+export default function Charitable({ route }) {
+    const { setFieldValue, to } = route.params
+    const navigation = useNavigation()
+
+    function onSubmit(data) {
+        setFieldValue('address', data.G2)
+        navigation.navigate(to)
+    }
+
     return (
         <ScrollView showsVerticalScrollIndicator={false} style={{ flex: 1 }}>
             <StatusBar backgroundColor="white" barStyle="dark-content" />
@@ -16,7 +25,12 @@ export default function Charitable() {
                 <Text style={styles.mainSubtitle}>qabul qiluvchini tanlang</Text>
 
                 {XayriyaFondlari.map((item) => (
-                    <TouchableOpacity key={item.id} opacity={0.7} style={{ flexDirection: 'row', flex: 1 }}>
+                    <TouchableOpacity
+                        key={item.id}
+                        opacity={0.7}
+                        onPress={() => onSubmit(item)}
+                        style={{ flexDirection: 'row', flex: 1 }}>
+
                         <Image style={styles.image} source={foundations[item.id].image} />
                         <View style={styles.card}>
                             <Text style={styles.cardTitle}>{item.G2}</Text>

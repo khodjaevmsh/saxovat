@@ -41,7 +41,7 @@ export default function PaymentType() {
                     <TouchableOpacity
                         key={item.id}
                         activeOpacity={0.7}
-                        onPress={() => navigation.navigate('ToWhomDetail')}>
+                        onPress={() => navigation.navigate('MainTab')}>
 
                         <View style={styles.box}>
                             <View style={[styles.imageHome, { backgroundColor: item.color }]}>
