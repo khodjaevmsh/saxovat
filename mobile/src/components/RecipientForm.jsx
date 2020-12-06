@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { Formik } from 'formik'
+import { useNavigation } from '@react-navigation/native'
 import Input from './common/Input'
 import Button from './common/Button'
 import TextArea from './common/TextArea'
@@ -12,13 +13,17 @@ import { RECIPIENT } from '../urls'
 
 export default function RecipientForm() {
     const recipientCreate = usePostRequest({ url: RECIPIENT })
+    const navigation = useNavigation()
 
-    async function onSubmit(data) {
+    async function onSubmit(data, actions) {
         const { error } = await recipientCreate.request({ data })
 
         if (error) {
-            console.log(error)
+            return
         }
+
+        navigation.navigate('Processing')
+        actions.resetForm()
     }
 
     return (

@@ -14,6 +14,7 @@ import Recipient from './screens/Recipient'
 import DeliveryTab from './screens/DeliveryTab'
 import ToWhomDetail from './screens/ToWhomDetail'
 import NeedyPeople from './screens/NeedyPeople'
+import Processing from './screens/Processing'
 import Food from './screens/Food'
 import Auth from './screens/Auth'
 import Confirm from './screens/Confirm'
@@ -79,6 +80,8 @@ export default function Navigation() {
                     headerTruncatedBackTitle: null,
                     headerBackImage: () => <Icon.ChevronLeft color={colors.WHITER} width={n(70)} height={n(40)} />,
                 }} />
+
+                <Stack.Screen name="Processing" component={Processing} options={{ headerShown: false }} />
 
                 <Stack.Screen name="PaymentType" component={PaymentType} options={{
                     headerShown: true,
