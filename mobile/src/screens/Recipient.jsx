@@ -7,7 +7,8 @@ import { n } from '../utils/normalize'
 import mehribonlikUylari from '../data/mehribonlikUylari.json'
 import muhtojKishilar from '../data/muhtojKishilar.json'
 
-export default function Recipient() {
+export default function Recipient({ route }) {
+    const { setFieldValue, to } = route.params
     const navigation = useNavigation()
     const cards = [
         {
@@ -42,8 +43,11 @@ export default function Recipient() {
             <Text style={styles.subTitle}>qabul qiluvchini tanlang</Text>
 
             <View style={{ display: 'flex' }}>
-                {cards.map((item) => (
-                    <TouchableOpacity key={item.text} activeOpacity={0.7} onPress={() => navigation.navigate(item.to)}>
+                {cards.map((item, index) => (
+                    <TouchableOpacity
+                        key={index}
+                        activeOpacity={0.7}
+                        onPress={() => navigation.navigate(item.to, { setFieldValue, to })}>
                         <View style={{ ...styles.box, backgroundColor: item.backgroundColor }}>
                             <View style={{ ...styles.iconHome, backgroundColor: item.iconColor[0] }}>
                                 {item.icon}

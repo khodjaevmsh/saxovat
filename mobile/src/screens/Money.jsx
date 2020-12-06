@@ -28,7 +28,7 @@ export default function Money() {
                             label="Kimga"
                             title={values.address ? values.address : 'Tanglang'}
                             styleText={{ color: 'gray' }}
-                            onPress={() => navigation.navigate('Recipient', { setFieldValue })} />
+                            onPress={() => navigation.navigate('Recipient', { setFieldValue, to: 'Money' })} />
 
                         <Input
                             right={<Text>UZS</Text>}
