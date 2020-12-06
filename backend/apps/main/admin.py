@@ -17,5 +17,5 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Recipient)
 class NeedyAdmin(admin.ModelAdmin):
-    list_display = ('category', 'phone',)
+    list_display = ('name', 'category', 'phone',)
     fields = ('name', 'phone', 'comment', 'category',)

@@ -1,4 +1,4 @@
 export const recipientCategory = [
-    { name: 'shaxs', value: 'Shaxs' },
-    { name: 'tashkilot', value: 'Tashkilot' },
+    { name: 'Shaxs', value: 'Shaxs' },
+    { name: 'Tashkilot', value: 'Tashkilot' },
 ]
