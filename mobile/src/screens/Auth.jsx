@@ -43,16 +43,16 @@ export default function Auth() {
                                 name="phone"
                                 type="text"
                                 keyboard="numeric"
-                                masked="phone"
+                                masked="(99) 999-99-99"
                                 left={(
                                     // eslint-disable-next-line jsx-a11y/accessible-emoji
                                     <Text style={styles.leftBlock}>🇺🇿
                                         <Text style={styles.leftBlockSpan}>   |   +998</Text>
                                     </Text>
                                 )}
-                                placeholder="(33) 234-2323"
+                                placeholder="(33) 234-23-23"
                                 placeholderTextColor="#B0B0B0"
-                                maxLength={13} />
+                                maxLength={14} />
                             <ServerError error={serverError} fieldOff />
                             <Button onPress={handleSubmit} title="Далее" />
                         </View>

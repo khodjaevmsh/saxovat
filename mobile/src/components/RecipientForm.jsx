@@ -52,7 +52,7 @@ export default function RecipientForm() {
                             name="phone"
                             type="text"
                             keyboard="numeric"
-                            masked="phoneSecond"
+                            masked="(99) 999-99-99"
                             left={(
                             // eslint-disable-next-line jsx-a11y/accessible-emoji
                                 <Text style={styles.inputText}>🇺🇿

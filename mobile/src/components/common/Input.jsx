@@ -40,11 +40,8 @@ export default function Input({
 
                         {masked ? (
                             <TextInputMask
-                                options={{
-                                    mask: masked === 'phone' ? '(99) 999-99-99'
-                                        : masked === 'phoneSecond' ? '(99) 999 99 99' : '99 | A 999 AA',
-                                }}
-                                type={masked === 'phone' ? 'cel-phone' : 'custom'}
+                                options={{ mask: masked }}
+                                type="custom"
                                 style={{ ...styles.inputStyle, ...text }}
                                 onChangeText={(value) => form.setFieldValue(name, value)}
                                 value={String(field.value)}
