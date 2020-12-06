@@ -13,11 +13,11 @@ export default function ButtonLikeInput({ title, onPress, styleText, error, labe
                 iconRight={<Icon.ChevronRight color="black" />}
                 onPress={onPress}
                 style={error ? {
-                    paddingHorizontal: 20,
+                    paddingHorizontal: n(20),
                     alignItems: 'flex-start',
                     backgroundColor: '#F0F0F0',
-                    borderRadius: 15,
-                    borderWidth: 1,
+                    borderRadius: n(15),
+                    borderWidth: n(1),
                     borderColor: 'red',
                     borderStyle: 'solid',
                 } : { ...styles.button }}
@@ -29,6 +29,7 @@ export default function ButtonLikeInput({ title, onPress, styleText, error, labe
 const styles = StyleSheet.create({
     button: {
         paddingHorizontal: n(10),
+        paddingLeft: n(22),
         alignItems: 'flex-start',
         backgroundColor: '#F0F0F0',
         borderRadius: n(15),
