@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, LogBox } from 'react-native'
 import * as Icon from 'react-native-feather'
 import { useNavigation } from '@react-navigation/native'
 import { colors } from '../utils/colors'
@@ -8,9 +8,13 @@ import mehribonlikUylari from '../data/mehribonlikUylari.json'
 import muhtojKishilar from '../data/muhtojKishilar.json'
 import XayriyaFondlari from '../data/XayriyaFondlari.json'
 
+LogBox.ignoreWarnings([
+    'Non-serializable values were found in the navigation state',
+])
+
 export default function Recipient({ route }) {
-    const { setFieldValue, to } = route.params
     const navigation = useNavigation()
+    const { setFieldValue, to } = route.params
 
     const cards = [
         {
