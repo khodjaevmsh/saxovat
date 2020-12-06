@@ -9,11 +9,11 @@ export default function DeliveryScreen() {
     const cards = [{ text: 'Mehribonlik uylari' }, { text: 'Kiyim-kechak' }, { text: 'Dori mahsulotlari' }]
 
     return (
-        <Container>
+        <Container style={{ paddingTop: n(32) }}>
             <ScrollView showsVerticalScrollIndicator={false}>
                 <StatusBar backgroundColor="white" barStyle="dark-content" />
 
-                <View style={styles.services}>
+                <View>
                     <Text style={styles.title}>Yetqazib berish</Text>
                     <Text style={styles.subTitle}>kerak bo’lgan xayriya mahsulotlari</Text>
 
@@ -78,11 +78,6 @@ export default function DeliveryScreen() {
 }
 
 const styles = StyleSheet.create({
-    services: {
-        backgroundColor: '#fff',
-        borderTopLeftRadius: n(30),
-        borderTopRightRadius: n(30),
-    },
     box: {
         flexDirection: 'row',
         width: '100%',
@@ -101,11 +96,11 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: n(38),
-        fontWeight: 'bold',
+        fontWeight: '700',
         color: colors.dark_swampy,
     },
     subTitle: {
-        fontSize: n(18),
+        fontSize: n(22),
         fontWeight: '400',
         marginBottom: n(20),
         color: colors.light_gray,
