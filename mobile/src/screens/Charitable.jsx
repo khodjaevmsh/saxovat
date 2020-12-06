@@ -1,31 +1,25 @@
 import React from 'react'
-import { useNavigation } from '@react-navigation/native'
-import { StyleSheet, Text, View, ScrollView, StatusBar, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, ScrollView, StatusBar, TouchableOpacity, Image } from 'react-native'
 import * as Icon from 'react-native-feather'
 import { colors } from '../utils/colors'
 import { n } from '../utils/normalize'
-import muhtojKishilar from '../data/muhtojKishilar.json'
+import XayriyaFondlari from '../data/XayriyaFondlari.json'
+import foundations from '../data/foundationsImage'
 
-export default function NeedyPeople({ route }) {
-    const { setFieldValue, to } = route.params
-    const navigation = useNavigation()
-
-    function selectHouse(data) {
-        setFieldValue('address', data.G1)
-        navigation.navigate(to)
-    }
-
+export default function Charitable() {
     return (
-        <ScrollView showsVerticalScrollIndicator={false}>
+        <ScrollView showsVerticalScrollIndicator={false} style={{ flex: 1 }}>
             <StatusBar backgroundColor="white" barStyle="dark-content" />
 
             <View style={styles.wrapper}>
-                <Text style={styles.mainTitle}>Muhtoj kishilar</Text>
+                <Text style={styles.mainTitle}>Xayriya Fondlari</Text>
                 <Text style={styles.mainSubtitle}>qabul qiluvchini tanlang</Text>
-                {muhtojKishilar.map((house) => (
-                    <TouchableOpacity key={house.G1} onPress={() => selectHouse(house)} opacity={0.7}>
+
+                {XayriyaFondlari.map((item) => (
+                    <TouchableOpacity key={item.id} opacity={0.7} style={{ flexDirection: 'row', flex: 1 }}>
+                        <Image style={styles.image} source={foundations[item.id].image} />
                         <View style={styles.card}>
-                            <Text style={styles.cardTitle}>{house.G1}, {house.G2}</Text>
+                            <Text style={styles.cardTitle}>{item.G2}</Text>
                             <Icon.ChevronRight color="black" width={n(60)} height={n(30)} />
                         </View>
                     </TouchableOpacity>
@@ -38,6 +32,7 @@ export default function NeedyPeople({ route }) {
 
 const styles = StyleSheet.create({
     wrapper: {
+        flex: 1,
         flexDirection: 'column',
         backgroundColor: 'white',
         paddingHorizontal: n(28),
@@ -49,9 +44,9 @@ const styles = StyleSheet.create({
         color: colors.swampy,
     },
     cardTitle: {
-        width: '85%',
-        fontSize: n(18),
+        fontSize: n(15),
         paddingHorizontal: n(25),
+        width: '70%',
     },
     cardSubTitle: {
         fontSize: n(15),
@@ -64,7 +59,7 @@ const styles = StyleSheet.create({
         marginBottom: n(30),
     },
     card: {
-        width: '100%',
+        width: '80%',
         height: n(70),
         backgroundColor: colors.grey,
         flexDirection: 'row',
@@ -73,5 +68,11 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         borderRadius: n(15),
         marginBottom: n(15),
+    },
+    image: {
+        marginTop: n(12),
+        marginRight: n(13),
+        width: n(50),
+        height: n(50),
     },
 })

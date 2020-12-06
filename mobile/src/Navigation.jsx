@@ -21,6 +21,7 @@ import Register from './screens/Register'
 import PaymentType from './screens/PaymentType'
 import { n } from './utils/normalize'
 import Product from './screens/Product'
+import Charitable from './screens/Charitable'
 
 const Stack = createStackNavigator()
 const Tab = createBottomTabNavigator()
@@ -80,6 +81,14 @@ export default function Navigation() {
                 }} />
 
                 <Stack.Screen name="PaymentType" component={PaymentType} options={{
+                    headerShown: true,
+                    title: null,
+                    headerBackTitle: null,
+                    headerTruncatedBackTitle: null,
+                    headerBackImage: () => <Icon.ChevronLeft color={colors.WHITER} width={n(70)} height={n(40)} />,
+                }} />
+
+                <Stack.Screen name="Charitable" component={Charitable} options={{
                     headerShown: true,
                     title: null,
                     headerBackTitle: null,

@@ -3,21 +3,10 @@ import { StyleSheet, View, Text } from 'react-native'
 import FundCard from './FundCard'
 import Scroll from './common/Scroll'
 import { colors } from '../utils/colors'
-import fund1 from '../assets/fund1.jpg'
-import fund2 from '../assets/fund2.jpg'
-import fund3 from '../assets/fund3.jpg'
 import { n } from '../utils/normalize'
+import foundations from '../data/foundationsImage'
 
 export default function Foundations() {
-    const foundations = [
-        { image: fund1 },
-        { image: fund2 },
-        { image: fund3 },
-        { image: fund1 },
-        { image: fund2 },
-        { image: fund3 },
-    ]
-
     return (
         <View style={styles.wrapper}>
             <Text style={styles.label}>Xayriya fondlari</Text>
