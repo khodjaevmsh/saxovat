@@ -1,9 +1,9 @@
 import React from 'react'
-import { StyleSheet, Text, View, ScrollView, StatusBar } from 'react-native'
+import { StyleSheet, Image, TouchableOpacity, Text, View, ScrollView, StatusBar } from 'react-native'
 import { n } from '../utils/normalize'
 import { colors } from '../utils/colors'
-import { Yetkazaman } from '../components/Svgs'
 import Container from '../components/common/Container'
+import deliveryImage from '../assets/delivery.png'
 
 export default function DeliveryScreen() {
     const cards = [{ text: 'Mehribonlik uylari' }, { text: 'Kiyim-kechak' }, { text: 'Dori mahsulotlari' }]
@@ -65,9 +65,21 @@ export default function DeliveryScreen() {
                                     </View>
                                 </View>
 
-                                <View style={{ flex: 1, justifyContent: 'center', alignItems: 'flex-end' }}>
-                                    <Yetkazaman width={n(80)} />
-                                </View>
+                                <TouchableOpacity
+                                    style={{ flex: 1, alignItems: 'flex-end' }}>
+                                    <View style={{
+                                        flex: 1,
+                                        backgroundColor: '#3ED598',
+                                        justifyContent: 'center',
+                                        alignItems: 'center',
+                                        height: n(91),
+                                        width: n(93),
+                                        borderRadius: 12,
+                                    }}>
+                                        <Image source={deliveryImage} />
+                                        <Text style={{ color: 'white' }}>Yektazaman</Text>
+                                    </View>
+                                </TouchableOpacity>
                             </View>
                         ))}
                     </View>
