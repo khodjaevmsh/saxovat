@@ -37,5 +37,6 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: n(17),
+        width: '90%',
     },
 })
