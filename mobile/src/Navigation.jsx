@@ -19,6 +19,7 @@ import Confirm from './screens/Confirm'
 import Register from './screens/Register'
 import PaymentType from './screens/PaymentType'
 import { n } from './utils/normalize'
+import Product from './screens/Product'
 
 const Stack = createStackNavigator()
 const Tab = createBottomTabNavigator()
@@ -39,6 +40,12 @@ export default function Navigation() {
                     headerBackImage: () => (<Icon.ChevronLeft color={colors.gray} />),
                     headerBackTitle: 'Orqaga',
                 }} />
+                <Stack.Screen name="Product" component={Product} options={{
+                    title: '',
+                    headerBackImage: () => (<Icon.ChevronLeft color={colors.gray} />),
+                    headerBackTitle: 'Orqaga',
+                }} />
+
                 <Stack.Screen name="ToWhomDetail" component={ToWhomDetail} options={{
                     headerShown: true,
                     title: null,
