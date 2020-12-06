@@ -18,8 +18,8 @@ def send_notification(data):
             "https://exp.host/--/api/v2/push/send",
             json.dumps(i),
             headers={
-                'accept': 'application/json',
+                'accept': 'application/data',
                 'accept-encoding': 'gzip, deflate',
-                'content-type': 'application/json',
+                'content-type': 'application/data',
             }
         ).json()
