@@ -11,9 +11,6 @@ import XayriyaFondlari from '../data/XayriyaFondlari.json'
 export default function Recipient({ route }) {
     const { setFieldValue, to } = route.params
     const navigation = useNavigation()
-    let count = 0
-    // eslint-disable-next-line
-    muhtojKishilar.map((item) => count += parseInt(item.G2))
 
     const cards = [
         {
@@ -37,7 +34,7 @@ export default function Recipient({ route }) {
             backgroundColor: '#FFE5E7',
             iconColor: ['#FF464F', 'rgba(255, 87, 95, 0.5)'],
             text: 'Muhtoj kishilar',
-            description: `${count} nafar`,
+            description: `${muhtojKishilar[muhtojKishilar.length - 1].G2} nafar`,
             to: 'NeedyPeople',
         },
     ]
