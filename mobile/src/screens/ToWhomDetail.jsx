@@ -1,11 +1,20 @@
 import React from 'react'
 import { StyleSheet, Text, View, ScrollView, StatusBar, TouchableOpacity } from 'react-native'
 import * as Icon from 'react-native-feather'
+import { useNavigation } from '@react-navigation/native'
 import { colors } from '../utils/colors'
 import { n } from '../utils/normalize'
 import mehribonlikUylari from '../data/mehribonlikUylari.json'
 
-export default function ToWhomDetail() {
+export default function ToWhomDetail({ route }) {
+    const { setFieldValue } = route.params
+    const navigation = useNavigation()
+
+    function selectHouse(data) {
+        setFieldValue('address', data.G1)
+        navigation.navigate('Money')
+    }
+
     return (
         <ScrollView showsVerticalScrollIndicator={false}>
             <StatusBar backgroundColor="white" barStyle="dark-content" />
@@ -14,7 +23,7 @@ export default function ToWhomDetail() {
                 <Text style={styles.mainTitle}>Mehribonlik uylari</Text>
                 <Text style={styles.mainSubtitle}>qabul qiluvchini tanlang</Text>
                 {mehribonlikUylari.map((house) => (
-                    <TouchableOpacity opacity={0.7}>
+                    <TouchableOpacity key={house.G1} onPress={() => selectHouse(house)} opacity={0.7}>
                         <View style={styles.card}>
                             <Text style={styles.cardTitle}>{house.G1}</Text>
                             <Icon.ChevronRight color="black" width={n(60)} height={n(30)} />
