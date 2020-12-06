@@ -8,6 +8,7 @@ import Button from '../components/common/Button'
 import Radio from '../components/common/Radio'
 import TextArea from '../components/common/TextArea'
 import { n } from '../utils/normalize'
+import Input from '../components/common/Input'
 
 export default function Food() {
     const navigation = useNavigation()
@@ -29,7 +30,7 @@ export default function Food() {
                     <Text style={styles.title}>Oziq ovqat</Text>
                     <Text style={styles.subTitle}>oziq-ovqat mahsulotlarini yuborish</Text>
 
-                    <Formik onSubmit={onSubmit} initialValues={{ delivery: '', amount: '' }}>
+                    <Formik onSubmit={onSubmit} initialValues={{ delivery: '', amount: '', who: '' }}>
                         {({ handleSubmit, values, setFieldValue }) => (
                             <View>
                                 <ButtonLikeInput
@@ -49,6 +50,19 @@ export default function Food() {
                                 <View style={styles.radio}>
                                     <Radio name="delivery" items={delivery} />
                                 </View>
+
+                                {!values.delivery && values.delivery !== '' ? (
+                                    <View style={{ marginBottom: 10 }}>
+                                        <Input
+                                            text={styles.inputText}
+                                            label="Kimdan"
+                                            name="who"
+                                            type="text"
+                                            placeholder="Kimdan"
+                                            placeholderTextColor="#C4C4C4"
+                                            maxLength={45} />
+                                    </View>
+                                ) : null}
 
                                 <TextArea
                                     multiline
@@ -72,6 +86,11 @@ const styles = StyleSheet.create({
     title: {
         fontSize: n(42),
         fontWeight: 'bold',
+    },
+    inputText: {
+        fontWeight: 'bold',
+        fontSize: 17,
+        color: '#686866',
     },
     radio: {
         flexDirection: 'row',
