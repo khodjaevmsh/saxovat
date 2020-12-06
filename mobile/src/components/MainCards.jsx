@@ -40,7 +40,10 @@ export default function MainCards() {
                     </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={{ width: '46%', marginLeft: '4%' }} activeOpacity={1}>
+                <TouchableOpacity
+                    onPress={() => navigation.navigate('Product')}
+                    style={{ width: '46%', marginLeft: '4%' }}
+                    activeOpacity={1}>
                     <View style={styles.textWrapper}>
                         <Text style={styles.blockText}>Kerakli</Text>
                         <Text style={styles.blockText}>buyumlar</Text>
