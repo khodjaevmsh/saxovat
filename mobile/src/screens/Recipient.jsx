@@ -7,8 +7,7 @@ import { n } from '../utils/normalize'
 import mehribonlikUylari from '../data/mehribonlikUylari.json'
 import muhtojKishilar from '../data/muhtojKishilar.json'
 
-export default function Recipient({ route }) {
-    const { setFieldValue } = route.params
+export default function Recipient() {
     const navigation = useNavigation()
     const cards = [
         {
@@ -32,7 +31,7 @@ export default function Recipient({ route }) {
             backgroundColor: '#FFE5E7',
             iconColor: ['#FF464F', 'rgba(255, 87, 95, 0.5)'],
             text: 'Muhtoj kishilar',
-            description: `${muhtojKishilar.length} nafar`,
+            description: `${muhtojKishilar[muhtojKishilar.length - 1].G2} nafar`,
             to: 'NeedyPeople',
         },
     ]
@@ -44,10 +43,7 @@ export default function Recipient({ route }) {
 
             <View style={{ display: 'flex' }}>
                 {cards.map((item) => (
-                    <TouchableOpacity
-                        key={item.text}
-                        activeOpacity={0.7}
-                        onPress={() => navigation.navigate(item.to, { setFieldValue })}>
+                    <TouchableOpacity key={item.text} activeOpacity={0.7} onPress={() => navigation.navigate(item.to)}>
                         <View style={{ ...styles.box, backgroundColor: item.backgroundColor }}>
                             <View style={{ ...styles.iconHome, backgroundColor: item.iconColor[0] }}>
                                 {item.icon}

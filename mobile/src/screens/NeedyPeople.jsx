@@ -16,7 +16,7 @@ export default function ToWhomDetail() {
                 {muhtojKishilar.map((item, index) => (
                     <TouchableOpacity key={index} opacity={0.7}>
                         <View style={styles.card}>
-                            <Text style={styles.cardTitle}>{item.G1}</Text>
+                            <Text style={styles.cardTitle}>{item.G1}, {item.G2}</Text>
                             <Icon.ChevronRight color="black" width={n(60)} height={n(30)} />
                         </View>
                     </TouchableOpacity>
