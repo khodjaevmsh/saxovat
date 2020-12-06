@@ -65,17 +65,8 @@ export default function DeliveryScreen() {
                                     </View>
                                 </View>
 
-                                <TouchableOpacity
-                                    style={{ flex: 1, alignItems: 'flex-end' }}>
-                                    <View style={{
-                                        flex: 1,
-                                        backgroundColor: '#3ED598',
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
-                                        height: n(91),
-                                        width: n(93),
-                                        borderRadius: 12,
-                                    }}>
+                                <TouchableOpacity style={{ flex: 1, alignItems: 'flex-end' }}>
+                                    <View style={styles.status}>
                                         <Image source={deliveryImage} />
                                         <Text style={{ color: 'white' }}>Yektazaman</Text>
                                     </View>
@@ -116,5 +107,14 @@ const styles = StyleSheet.create({
         fontWeight: '400',
         marginBottom: n(20),
         color: colors.light_gray,
+    },
+    status: {
+        flex: 1,
+        backgroundColor: '#3ED598',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: n(91),
+        width: n(93),
+        borderRadius: n(12),
     },
 })
