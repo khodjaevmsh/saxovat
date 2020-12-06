@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     wrapper: {
         backgroundColor: 'white',
         paddingHorizontal: n(28),
-        paddingTop: n(24),
+        paddingVertical: n(24),
     },
     mainTitle: {
         color: colors.dark_swampy,

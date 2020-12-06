@@ -11,14 +11,14 @@ import { usePostRequest } from '../hooks/request'
 import { RECIPIENT } from '../urls'
 
 export default function RecipientForm() {
-    // const recipientCreate = usePostRequest({ url: RECIPIENT })
+    const recipientCreate = usePostRequest({ url: RECIPIENT })
 
     async function onSubmit(data) {
-        // const { error } = await recipientCreate.request({ data })
-        // if (error) {
-        //     return
-        // }
-        console.log(data)
+        const { error } = await recipientCreate.request({ data })
+
+        if (error) {
+            console.log(error)
+        }
     }
 
     return (

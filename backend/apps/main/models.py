@@ -37,8 +37,8 @@ class Donation(BaseModel):
 
 class Recipient(BaseModel):
     CATEGORY = (
-        ('shaxs', 'Shaxs'),
-        ('tashkilot', 'Tashkilot'),
+        ('Shaxs', 'Shaxs'),
+        ('Tashkilot', 'Tashkilot'),
     )
     name = models.CharField(max_length=255)
     phone = models.CharField(max_length=255)

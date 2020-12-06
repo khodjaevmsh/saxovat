@@ -7,14 +7,14 @@ from main.serializers.recipient import RecipientSerializer
 
 class RecipientListView(APIView):
     def get(self, request):
-        queryset = Recipient.objects.list(user=request.user)
+        queryset = Recipient.objects.all()
         serializer = RecipientSerializer(queryset, many=True)
         return Response(serializer.data)
 
     def post(self, request):
         serializer = RecipientSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        serializer.save(created_by=request.user, user=request.user)
+        serializer.save()
         return Response(serializer.data, 201)
 
 
