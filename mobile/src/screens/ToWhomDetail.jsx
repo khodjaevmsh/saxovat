@@ -7,12 +7,12 @@ import { n } from '../utils/normalize'
 import mehribonlikUylari from '../data/mehribonlikUylari.json'
 
 export default function ToWhomDetail({ route }) {
-    const { setFieldValue } = route.params
+    const { setFieldValue, to } = route.params
     const navigation = useNavigation()
 
     function selectHouse(data) {
         setFieldValue('address', data.G1)
-        navigation.navigate('Money')
+        navigation.navigate(to)
     }
 
     return (

@@ -28,13 +28,13 @@ export default function Product() {
                 <Text style={styles.subTitle}>buyumlarni yuborish</Text>
 
                 <Formik onSubmit={onSubmit} initialValues={{ delivery: '', amount: '' }}>
-                    {({ handleSubmit }) => (
+                    {({ handleSubmit, setFieldValue, values }) => (
                         <View>
                             <ButtonLikeInput
                                 label="Kimga"
-                                title="Mehribonlik uyi №15"
+                                title={values.address ? values.address : 'Tanglang'}
                                 styleText={{ color: 'gray' }}
-                                onPress={() => navigation.navigate('Recipient')} />
+                                onPress={() => navigation.navigate('Recipient', { setFieldValue, to: 'Product' })} />
 
                             <Text style={{
                                 fontSize: n(20),
