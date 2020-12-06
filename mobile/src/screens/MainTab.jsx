@@ -8,7 +8,7 @@ import { n } from '../utils/normalize'
 
 export default function MainScreen() {
     return (
-        <ScrollView showsVerticalScrollIndicator={false} style={{ paddingTop: n(20) }}>
+        <ScrollView showsVerticalScrollIndicator={false}>
             <StatusBar backgroundColor="white" barStyle="dark-content" />
             <View style={styles.wrapper}>
                 <Text style={styles.mainTitle}>Saxovat!</Text>
