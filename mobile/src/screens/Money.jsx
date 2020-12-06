@@ -14,7 +14,6 @@ export default function Money() {
 
     function onSubmit() {
         navigation.navigate('PaymentType')
-        console.log('onSubmit Money')
     }
 
     return (
@@ -23,11 +22,11 @@ export default function Money() {
             <Text style={styles.subTitle}>o’tkazma ma’lumotlarini kiriting</Text>
 
             <Formik onSubmit={onSubmit} initialValues={{ address: '', amount: '' }}>
-                {({ handleSubmit, setFieldValue }) => (
+                {({ handleSubmit, values, setFieldValue }) => (
                     <View style={{ flex: 1 }}>
                         <ButtonLikeInput
                             label="Kimga"
-                            title="Mehribonlik uyi №15"
+                            title={values.address ? values.address : 'Tanglang'}
                             styleText={{ color: 'gray' }}
                             onPress={() => navigation.navigate('Recipient', { setFieldValue })} />
 
