@@ -55,10 +55,10 @@ export default function Food() {
                                     <View style={{ marginBottom: 10 }}>
                                         <Input
                                             text={styles.inputText}
-                                            label="Kimdan"
+                                            label="Sizning manzilingiz"
                                             name="who"
                                             type="text"
-                                            placeholder="Kimdan"
+                                            placeholder="Sizning manzilingiz"
                                             placeholderTextColor="#C4C4C4"
                                             maxLength={45} />
                                     </View>
