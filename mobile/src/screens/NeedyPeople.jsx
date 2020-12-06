@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
         color: colors.swampy,
     },
     cardTitle: {
+        width: '85%',
         fontSize: n(18),
         paddingHorizontal: n(25),
     },

@@ -6,10 +6,15 @@ import { colors } from '../utils/colors'
 import { n } from '../utils/normalize'
 import mehribonlikUylari from '../data/mehribonlikUylari.json'
 import muhtojKishilar from '../data/muhtojKishilar.json'
+import XayriyaFondlari from '../data/XayriyaFondlari.json'
 
 export default function Recipient({ route }) {
     const { setFieldValue, to } = route.params
     const navigation = useNavigation()
+    let count = 0
+    // eslint-disable-next-line
+    muhtojKishilar.map((item) => count += parseInt(item.G2))
+
     const cards = [
         {
             icon: <Icon.Home style={{ color: 'white' }} />,
@@ -24,7 +29,7 @@ export default function Recipient({ route }) {
             backgroundColor: '#FEF3D9',
             iconColor: ['#FFBC25', 'rgba(255, 197, 66, 0.5)'],
             text: 'Xayriya fondlari',
-            description: '22 ta xayriya fondi',
+            description: `${XayriyaFondlari.length} ta xayriya fondi`,
             to: 'Charitable',
         },
         {
@@ -32,7 +37,7 @@ export default function Recipient({ route }) {
             backgroundColor: '#FFE5E7',
             iconColor: ['#FF464F', 'rgba(255, 87, 95, 0.5)'],
             text: 'Muhtoj kishilar',
-            description: `${muhtojKishilar[muhtojKishilar.length - 1].G2} nafar`,
+            description: `${count} nafar`,
             to: 'NeedyPeople',
         },
     ]
