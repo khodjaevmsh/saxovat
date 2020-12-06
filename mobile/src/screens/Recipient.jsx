@@ -4,6 +4,7 @@ import * as Icon from 'react-native-feather'
 import { useNavigation } from '@react-navigation/native'
 import { colors } from '../utils/colors'
 import { n } from '../utils/normalize'
+import mehribonlikUylari from '../data/mehribonlikUylari.json'
 
 export default function Recipient() {
     const navigation = useNavigation()
@@ -13,7 +14,7 @@ export default function Recipient() {
             backgroundColor: '#D4F5E9',
             iconColor: ['#25C685', 'rgba(61, 213, 152, 0.5)'],
             text: 'Mehribonlik uylari',
-            description: '158 ta mehribonlik uyi',
+            description: `${mehribonlikUylari.length} ta mehribonlik uyi`,
         },
         {
             icon: <Icon.DollarSign style={{ color: 'white' }} />,

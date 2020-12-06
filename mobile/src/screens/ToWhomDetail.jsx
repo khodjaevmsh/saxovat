@@ -3,15 +3,9 @@ import { StyleSheet, Text, View, ScrollView, StatusBar, TouchableOpacity } from 
 import * as Icon from 'react-native-feather'
 import { colors } from '../utils/colors'
 import { n } from '../utils/normalize'
+import mehribonlikUylari from '../data/mehribonlikUylari.json'
 
 export default function ToWhomDetail() {
-    const shelterHouses = [
-        { id: 1, name: 'Mehribonlik uyi №1' },
-        { id: 2, name: 'Mehribonlik uyi №2' },
-        { id: 3, name: 'Mehribonlik uyi №3' },
-        { id: 4, name: 'Mehribonlik uyi №4' },
-        { id: 5, name: 'Mehribonlik uyi №5' },
-    ]
     return (
         <ScrollView showsVerticalScrollIndicator={false}>
             <StatusBar backgroundColor="white" barStyle="dark-content" />
@@ -19,10 +13,10 @@ export default function ToWhomDetail() {
             <View style={styles.wrapper}>
                 <Text style={styles.mainTitle}>Mehribonlik uylari</Text>
                 <Text style={styles.mainSubtitle}>qabul qiluvchini tanlang</Text>
-                {shelterHouses.map((house) => (
+                {mehribonlikUylari.map((house) => (
                     <TouchableOpacity opacity={0.7}>
                         <View style={styles.card}>
-                            <Text style={styles.cardTitle}>{house.name}</Text>
+                            <Text style={styles.cardTitle}>{house.G1}</Text>
                             <Icon.ChevronRight color="black" width={n(60)} height={n(30)} />
                         </View>
                     </TouchableOpacity>
