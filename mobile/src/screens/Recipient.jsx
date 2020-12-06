@@ -25,7 +25,7 @@ export default function Recipient({ route }) {
             iconColor: ['#FFBC25', 'rgba(255, 197, 66, 0.5)'],
             text: 'Xayriya fondlari',
             description: '22 ta xayriya fondi',
-            to: 'ToWhomDetail',
+            to: 'Charitable',
         },
         {
             icon: <Icon.User style={{ color: 'white' }} />,

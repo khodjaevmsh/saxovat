@@ -1,6 +1,5 @@
 import React from 'react'
 import { StyleSheet, Text, View, ScrollView, StatusBar } from 'react-native'
-import { useNavigation } from '@react-navigation/native'
 import MainCards from '../components/MainCards'
 import Foundations from '../components/Foundations'
 import { colors } from '../utils/colors'
@@ -8,7 +7,7 @@ import { n } from '../utils/normalize'
 
 export default function MainScreen() {
     return (
-        <ScrollView showsVerticalScrollIndicator={false}>
+        <ScrollView showsVerticalScrollIndicator={false} style={{ paddingTop: n(20) }}>
             <StatusBar backgroundColor="white" barStyle="dark-content" />
             <View style={styles.wrapper}>
                 <Text style={styles.mainTitle}>Saxovat!</Text>

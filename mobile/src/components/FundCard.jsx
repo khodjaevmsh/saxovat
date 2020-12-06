@@ -2,9 +2,9 @@ import React from 'react'
 import { View, Image, StyleSheet } from 'react-native'
 import { n } from '../utils/normalize'
 
-export default function FundCard({ fund }) {
+export default function FundCard({ fund, style }) {
     return (
-        <View style={styles.block}>
+        <View style={[styles.block, style]}>
             <Image style={styles.image} source={fund.image} />
         </View>
     )
