@@ -13,6 +13,7 @@ export default function Money() {
     const navigation = useNavigation()
 
     function onSubmit() {
+        navigation.navigate('PaymentType')
         console.log('onSubmit Money')
     }
 
