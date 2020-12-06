@@ -13,6 +13,7 @@ export default function Food() {
     const navigation = useNavigation()
 
     function onSubmit() {
+        navigation.navigate('Success')
         console.log('onSubmit Food')
     }
 

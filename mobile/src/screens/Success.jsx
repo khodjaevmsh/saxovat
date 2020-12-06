@@ -6,14 +6,14 @@ import { Time } from '../components/Svgs'
 import { colors } from '../utils/colors'
 import { n } from '../utils/normalize'
 
-export default function Processing() {
+export default function Success() {
     const navigation = useNavigation()
 
     return (
         <View style={styles.wrapper}>
             <View>
-                <Text style={styles.mainTitle}>Ma'lumot uchun rahmat )</Text>
-                <Text style={styles.mainSubtitle}>Ma'lumotingiz tekshirilgandan so'ng dasturga qo'shiladi</Text>
+                <Text style={styles.mainTitle}>Xayriyangiz uchun Raxmat!</Text>
+                <Text style={styles.mainSubtitle}>Tez orada xayriyangiz yetkazib beriladi</Text>
             </View>
             <Time width="100%" height="250" />
 

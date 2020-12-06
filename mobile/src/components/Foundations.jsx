@@ -25,6 +25,7 @@ export default function Foundations() {
 
 const styles = StyleSheet.create({
     wrapper: {
+        marginTop: 10,
         paddingVertical: n(20),
         backgroundColor: colors.grey,
     },

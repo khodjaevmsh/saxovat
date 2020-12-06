@@ -23,6 +23,7 @@ import PaymentType from './screens/PaymentType'
 import { n } from './utils/normalize'
 import Product from './screens/Product'
 import Charitable from './screens/Charitable'
+import Success from './screens/Success'
 
 const Stack = createStackNavigator()
 const Tab = createBottomTabNavigator()
@@ -82,6 +83,7 @@ export default function Navigation() {
                 }} />
 
                 <Stack.Screen name="Processing" component={Processing} options={{ headerShown: false }} />
+                <Stack.Screen name="Success" component={Success} options={{ headerShown: false }} />
 
                 <Stack.Screen name="PaymentType" component={PaymentType} options={{
                     headerShown: true,
