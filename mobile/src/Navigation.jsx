@@ -13,6 +13,7 @@ import RecipientTab from './screens/RecipientTab'
 import Recipient from './screens/Recipient'
 import DeliveryTab from './screens/DeliveryTab'
 import ToWhomDetail from './screens/ToWhomDetail'
+import NeedyPeople from './screens/NeedyPeople'
 import Food from './screens/Food'
 import Auth from './screens/Auth'
 import Confirm from './screens/Confirm'
@@ -47,6 +48,14 @@ export default function Navigation() {
                 }} />
 
                 <Stack.Screen name="ToWhomDetail" component={ToWhomDetail} options={{
+                    headerShown: true,
+                    title: null,
+                    headerBackTitle: null,
+                    headerTruncatedBackTitle: null,
+                    headerBackImage: () => <Icon.ChevronLeft color={colors.WHITER} width={n(70)} height={n(40)} />,
+                }} />
+
+                <Stack.Screen name="NeedyPeople" component={NeedyPeople} options={{
                     headerShown: true,
                     title: null,
                     headerBackTitle: null,

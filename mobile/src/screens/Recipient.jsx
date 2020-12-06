@@ -5,6 +5,7 @@ import { useNavigation } from '@react-navigation/native'
 import { colors } from '../utils/colors'
 import { n } from '../utils/normalize'
 import mehribonlikUylari from '../data/mehribonlikUylari.json'
+import muhtojKishilar from '../data/muhtojKishilar.json'
 
 export default function Recipient({ route }) {
     const { setFieldValue, to } = route.params
@@ -31,8 +32,8 @@ export default function Recipient({ route }) {
             backgroundColor: '#FFE5E7',
             iconColor: ['#FF464F', 'rgba(255, 87, 95, 0.5)'],
             text: 'Muhtoj kishilar',
-            description: '157 nafar',
-            to: 'ToWhomDetail',
+            description: `${muhtojKishilar.length} nafar`,
+            to: 'NeedyPeople',
         },
     ]
 
