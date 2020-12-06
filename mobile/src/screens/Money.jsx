@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, ScrollView } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { Formik } from 'formik'
 import Container from '../components/common/Container'
@@ -62,10 +62,7 @@ const styles = StyleSheet.create({
         color: colors.light_gray,
     },
     button: {
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        right: 0,
+        flex: 1,
         justifyContent: 'flex-end',
     },
 })
