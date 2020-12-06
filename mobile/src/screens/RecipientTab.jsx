@@ -20,11 +20,6 @@ export default function RecipientTab() {
 }
 
 const styles = StyleSheet.create({
-    services: {
-        backgroundColor: '#fff',
-        borderTopLeftRadius: n(30),
-        borderTopRightRadius: n(30),
-    },
     wrapper: {
         backgroundColor: 'white',
         paddingHorizontal: n(28),

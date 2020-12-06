@@ -10,7 +10,7 @@ export default function MainScreen() {
     const navigation = useNavigation()
 
     return (
-        <ScrollView showsVerticalScrollIndicator={false} style={{ paddingTop: n(20) }}>
+        <ScrollView showsVerticalScrollIndicator={false}>
             <StatusBar backgroundColor="white" barStyle="dark-content" />
             <View style={styles.wrapper}>
                 <Text style={styles.mainTitle} onPress={() => navigation.navigate('Food')}>Saxovat!</Text>
