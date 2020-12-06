@@ -66,12 +66,13 @@ const styles = StyleSheet.create({
     },
     textWrapper: {
         position: 'absolute',
+        zIndex: 1,
         top: '15%',
         left: '10%',
     },
     blockText: {
         color: 'white',
-        zIndex: 2,
+        zIndex: 1,
         fontSize: n(23),
         fontWeight: '600',
     },
@@ -86,7 +87,6 @@ const styles = StyleSheet.create({
         left: '40%',
     },
     flex: {
-        marginTop: n(-25),
         width: '100%',
         flexDirection: 'row',
     },
