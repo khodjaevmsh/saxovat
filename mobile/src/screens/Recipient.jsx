@@ -15,6 +15,7 @@ export default function Recipient() {
             iconColor: ['#25C685', 'rgba(61, 213, 152, 0.5)'],
             text: 'Mehribonlik uylari',
             description: `${mehribonlikUylari.length} ta mehribonlik uyi`,
+            to: 'ToWhomDetail',
         },
         {
             icon: <Icon.DollarSign style={{ color: 'white' }} />,
@@ -22,6 +23,7 @@ export default function Recipient() {
             iconColor: ['#FFBC25', 'rgba(255, 197, 66, 0.5)'],
             text: 'Xayriya fondlari',
             description: '22 ta xayriya fondi',
+            to: 'ToWhomDetail',
         },
         {
             icon: <Icon.User style={{ color: 'white' }} />,
@@ -29,6 +31,7 @@ export default function Recipient() {
             iconColor: ['#FF464F', 'rgba(255, 87, 95, 0.5)'],
             text: 'Muhtoj kishilar',
             description: '157 nafar',
+            to: 'ToWhomDetail',
         },
     ]
 
@@ -39,7 +42,7 @@ export default function Recipient() {
 
             <View style={{ display: 'flex' }}>
                 {cards.map((item) => (
-                    <TouchableOpacity activeOpacity={0.7} onPress={() => navigation.navigate('ToWhomDetail')}>
+                    <TouchableOpacity key={item.text} activeOpacity={0.7} onPress={() => navigation.navigate(item.to)}>
                         <View style={{ ...styles.box, backgroundColor: item.backgroundColor }}>
                             <View style={{ ...styles.iconHome, backgroundColor: item.iconColor[0] }}>
                                 {item.icon}

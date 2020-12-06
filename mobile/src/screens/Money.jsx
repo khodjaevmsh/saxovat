@@ -23,13 +23,13 @@ export default function Money() {
             <Text style={styles.subTitle}>o’tkazma ma’lumotlarini kiriting</Text>
 
             <Formik onSubmit={onSubmit} initialValues={{ address: '', amount: '' }}>
-                {({ handleSubmit }) => (
+                {({ handleSubmit, setFieldValue }) => (
                     <View style={{ flex: 1 }}>
                         <ButtonLikeInput
                             label="Kimga"
                             title="Mehribonlik uyi №15"
                             styleText={{ color: 'gray' }}
-                            onPress={() => navigation.navigate('Recipient')} />
+                            onPress={() => navigation.navigate('Recipient', { setFieldValue })} />
 
                         <Input
                             right={<Text>UZS</Text>}
