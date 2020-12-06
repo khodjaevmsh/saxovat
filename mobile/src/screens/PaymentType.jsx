@@ -55,6 +55,10 @@ export default function PaymentType() {
                     </TouchableOpacity>
                 ))}
             </View>
+
+            <Text style={{ color: colors.light_gray }}>
+                *Yuborgan mablag'ingizning 1% loiha rivojlanishi uchun sarflanadi
+            </Text>
         </Container>
     )
 }
